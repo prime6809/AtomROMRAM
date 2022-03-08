@@ -1,0 +1,52 @@
+Pin Freeze File:  version P.20131013
+
+9536XL44VQ XC9536XL-5-VQ44
+Addr<0> S:PIN41
+Addr<10> S:PIN21
+Addr<11> S:PIN19
+Addr<12> S:PIN22
+Addr<13> S:PIN27
+Addr<14> S:PIN29
+Addr<15> S:PIN31
+Addr<1> S:PIN39
+Addr<2> S:PIN37
+Addr<3> S:PIN36
+Addr<4> S:PIN34
+Addr<5> S:PIN33
+Addr<6> S:PIN32
+Addr<7> S:PIN30
+Addr<8> S:PIN28
+Addr<9> S:PIN23
+DskROMSW S:PIN6
+PHI2 S:PIN3
+RW S:PIN44
+SpeedSW S:PIN8
+Data<0> S:PIN43
+Data<1> S:PIN42
+Data<2> S:PIN40
+Data<3> S:PIN38
+NBuffCtl S:PIN7
+NRAMCS S:PIN1
+NRDS S:PIN5
+NROMCS S:PIN2
+NWDS S:PIN12
+RA<12> S:PIN18
+RA<13> S:PIN20
+RA<14> S:PIN13
+RA<15> S:PIN16
+RA<16> S:PIN14
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_1 DataOut<2> SwitchLatch<1> DataOut<0> DataOut<1>
+		 SwitchLatch<0> NROMCS_OBUF NRAMCS_OBUF RomLatch_2
+		 NRDS_OBUF EXP4_ NBuffCtl_OBUF RomLatch_1
+		 NWDS_OBUF RA_14_OBUF RA_16_OBUF RA_15_OBUF
+		 RA_12_OBUF RomLatch_0
+PARTITION FB2_2 DataOut<3>
+PARTITION FB2_11 $OpTx$FX_DC$36 $OpTx$FX_DC$23 $OpTx$FX_DC$22 SwitchLatch<3>
+		 SwitchLatch<2> RA_13_OBUF RomLatch_3 $OpTx$FX_SC$24
+		
+

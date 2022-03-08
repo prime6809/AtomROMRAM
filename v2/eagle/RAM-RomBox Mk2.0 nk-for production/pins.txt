@@ -1,0 +1,401 @@
+Pinlist
+
+Exported from RAM-Rombox.sch at 22/08/2011 22:07:10
+
+EAGLE Version 5.10.0 Copyright (c) 1988-2010 CadSoft
+
+Part     Pad      Pin        Dir      Net
+
+C1       1        1          Pas      VCC
+         2        2          Pas      GND
+
+C2       1        1          Pas      VCC
+         2        2          Pas      GND
+
+C3       1        1          Pas      VCC
+         2        2          Pas      GND
+
+C4       1        1          Pas      VCC
+         2        2          Pas      GND
+
+C5       1        1          Pas      VCC
+         2        2          Pas      GND
+
+C6       1        1          Pas      N$2
+         2        2          Pas      GND
+
+C7       1        1          Pas      MS
+         2        2          Pas      GND
+
+C8       1        1          Pas      N$16
+         2        2          Pas      GND
+
+C9       1        1          Pas      N$19
+         2        2          Pas      GND
+
+C10      1        1          Pas      GND
+         2        2          Pas      VCC
+
+C11      1        1          Pas      GND
+         2        2          Pas      VCC
+
+C12      1        1          Pas      GND
+         2        2          Pas      VCC
+
+CN1      1        VPB        In       N$1
+         2        RDY        I/O      RDY
+         3        PHI1       Out      PHI1
+         4        IRQ        In       IRQ
+         5        MLB        Out      MLB
+         6        NMI        In       NMI
+         7        SYNC       Out      SYNC
+         8        VCC        Pwr      VCC
+         9        A0         I/O      A0
+         10       A1         I/O      A1
+         11       A2         I/O      A2
+         12       A3         I/O      A3
+         13       A4         I/O      A4
+         14       A5         I/O      A5
+         15       A6         I/O      A6
+         16       A7         I/O      A7
+         17       A8         I/O      A8
+         18       A9         I/O      A9
+         19       A10        I/O      A10
+         20       A11        I/O      A11
+         21       GND        Sup      GND
+         22       A12        I/O      A12
+         23       A13        I/O      A13
+         24       A14        I/O      A14
+         25       A15        I/O      A15
+         26       D7         I/O      D7
+         27       D6         I/O      D6
+         28       D5         I/O      D5
+         29       D4         I/O      D4
+         30       D3         I/O      D3
+         31       D2         I/O      D2
+         32       D1         I/O      D1
+         33       D0         I/O      D0
+         34       R/W        Out      R/W
+         35       NC         NC       NC1
+         36       BE         Out      BE
+         37       PH0-IN     In       PHI0-IN
+         38       SOB        In       SOB
+         39       PHI2       Out      PHI2-OUT
+         40       RES        In       RES
+
+CN2      1        VCC        I/O      VCC
+         2        GND        I/O      GND
+         3        TCK        I/O      N$3
+         4        TDO        I/O      N$6
+         5        TDI        I/O      N$7
+         6        TMS        I/O      N$5
+
+D1       A        A          Pas      N$18
+         C        C          Pas      N$19
+
+D2       A        A          Pas      N$12
+         C        C          Pas      MS
+
+IC1      1        VPB        In       VPB
+         2        RDY        I/O      RDY
+         3        PHI1       Out      PHI1
+         4        IRQ        In       IRQ
+         5        MLB        Out      MLB
+         6        NMI        In       NMI
+         7        SYNC       Out      SYNC
+         8        VCC        Pwr      VCC
+         9        A0         I/O      A0
+         10       A1         I/O      A1
+         11       A2         I/O      A2
+         12       A3         I/O      A3
+         13       A4         I/O      A4
+         14       A5         I/O      A5
+         15       A6         I/O      A6
+         16       A7         I/O      A7
+         17       A8         I/O      A8
+         18       A9         I/O      A9
+         19       A10        I/O      A10
+         20       A11        I/O      A11
+         21       GND        Sup      GND
+         22       A12        I/O      A12
+         23       A13        I/O      A13
+         24       A14        I/O      A14
+         25       A15        I/O      A15
+         26       D7         I/O      D7
+         27       D6         I/O      D6
+         28       D5         I/O      D5
+         29       D4         I/O      D4
+         30       D3         I/O      D3
+         31       D2         I/O      D2
+         32       D1         I/O      D1
+         33       D0         I/O      D0
+         34       R/W        Out      R/W
+         35       NC         NC       NC1
+         36       BE         Out      BE
+         37       PH0-IN     In       PHI0-IN
+         38       SOB        In       SOB
+         39       PHI2       Out      PHI2
+         40       RES        In       RES
+
+IC2      1        CLR        In       N$9
+         2        D          In       N$18
+         3        CLK        In       N$32
+         4        PRE        In       VCC
+         5        Q          Out               *** unconnected ***
+         6        !Q         Out      N$10
+         7        GND        Pwr      GND
+         8        !Q         Out               *** unconnected ***
+         9        Q          Out      N$15
+         10       PRE        In       N$16
+         11       CLK        In       B0
+         12       D          In       MS
+         13       CLR        In       VCC
+         14       VCC        Pwr      VCC
+
+IC2A     1        A14        In       RA14
+         2        A12        In       RA12
+         3        A7         In       A7
+         4        A6         In       A6
+         5        A5         In       A5
+         6        A4         In       A4
+         7        A3         In       A3
+         8        A2         In       A2
+         9        A1         In       A1
+         10       A0         In       A0
+         11       D0         I/O      D0
+         12       D1         I/O      D1
+         13       D2         I/O      D2
+         14       GND        Pwr      GND
+         15       D3         I/O      D3
+         16       D4         I/O      D4
+         17       D5         I/O      D5
+         18       D6         I/O      D6
+         19       D7         I/O      D7
+         20       /CS1       In       NRAMCS
+         21       A10        In       A10
+         22       /OE        In       NRDS
+         23       A11        In       A11
+         24       A9         In       A9
+         25       A8         In       A8
+         26       A13        In       RA13
+         27       /WE        In       NWDS
+         28       VCC        Pwr      VCC
+
+IC2B     1        A14        In       RA14
+         2        A12        In       RA12
+         3        A7         In       A7
+         4        A6         In       A6
+         5        A5         In       A5
+         6        A4         In       A4
+         7        A3         In       A3
+         8        A2         In       A2
+         9        A1         In       A1
+         10       A0         In       A0
+         11       D0         I/O      D0
+         12       D1         I/O      D1
+         13       D2         I/O      D2
+         14       GND        Pwr      GND
+         15       D3         I/O      D3
+         16       D4         I/O      D4
+         17       D5         I/O      D5
+         18       D6         I/O      D6
+         19       D7         I/O      D7
+         20       /CS1       In       NRAMCS
+         21       A10        In       A10
+         22       /OE        In       NRDS
+         23       A11        In       A11
+         24       A9         In       A9
+         25       A8         In       A8
+         26       A13        In       RA13
+         27       /WE        In       NWDS
+         28       VCC        Pwr      VCC
+
+IC3      1        FB2MC1     I/O      D3
+         2        FB1MC1     I/O      A0
+         3        FB1MC2     I/O      D2
+         4        FB1MC4     I/O      D0
+         5        FB1MC3/GCK1 I/O      D1
+         6        FB1MC5/GCK2 I/O      NROMCS
+         7        FB1MC7/GCK3 I/O      BLKAEN
+         8        FB1MC6     I/O      NRAMCS
+         9        FB1MC8     I/O      DOSROMEN
+         10       GND        Pwr      GND
+         11       FB1MC9     I/O      NRDS
+         12       FB1MC10    I/O      NBUFFCTL
+         13       FB1MC11    I/O      PHI2-OUT
+         14       FB1MC12    I/O      R/W
+         15       TDI        In       N$7
+         16       TMS        In       N$5
+         17       TCK        In       N$3
+         18       FB1MC13    I/O      NWDS
+         19       FB1MC14    I/O      RA16
+         20       FB1MC15    I/O      RA15
+         21       VCCINT     Pwr      VCC
+         22       FB1MC16    I/O      RA14
+         23       GND        Pwr      GND
+         24       FB1MC17    I/O      RA12
+         25       FB2MC17    I/O      RA13
+         26       FB2MC16    I/O      A12
+         27       FB2MC15    I/O      A13
+         28       FB2MC14    I/O      A11
+         29       FB2MC13    I/O      A10
+         30       TDO        Out      N$6
+         31       GND        Pwr      GND
+         32       VCCIO      Pwr      VCC
+         33       FB2MC12    I/O      A8
+         34       FB2MC11    I/O      A9
+         35       FB2MC10    I/O      A7
+         36       FB2MC9     I/O      A14
+         37       FB2MC8     I/O      A6
+         38       FB2MC7     I/O      A15
+         39       FB2MC6/GSR I/O      A5
+         40       FB2MC5/GTS2 I/O      A4
+         41       VCCINT     Pwr      VCC
+         42       FB3MC3/GTS1 I/O      A2
+         43       FB2MC4     I/O      A3
+         44       FB2MC2     I/O      A1
+
+IC4      1        NC1        NC                *** unconnected ***
+         2        A16        In       RA16
+         3        A15        In       RA15
+         4        A12        In       RA12
+         5        A7         In       A7
+         6        A6         In       A6
+         7        A5         In       A5
+         8        A4         In       A4
+         9        A3         In       A3
+         10       A2         In       A2
+         11       A1         In       A1
+         12       A0         In       A0
+         13       D0         I/O      D0
+         14       D1         I/O      D1
+         15       D2         I/O      D2
+         16       GND        Pwr      GND
+         17       D3         I/O      D3
+         18       D4         I/O      D4
+         19       D5         I/O      D5
+         20       D6         I/O      D6
+         21       D7         I/O      D7
+         22       /CS        In       NROMCS
+         23       A10        In       A10
+         24       /OE        In       NRDS
+         25       A11        In       A11
+         26       A9         In       A9
+         27       A8         In       A8
+         28       A13        In       RA13
+         29       A14        In       RA14
+         30       NC30       NC       VCC
+         31       /WE        In       VCC
+         32       VCC        Pwr      VCC
+
+IC5      1        I0         In       VIDCLK
+         2        I1         In       VCC
+         3        O          Out      N$11
+         4        I0         In       VIDCLK
+         5        I1         In       N$2
+         6        O          Out      N$32
+         7        GND        Pwr      GND
+         8        O          Out      N$12
+         9        I0         In       VCC
+         10       I1         In       !MS
+         11       O          Out      N$9
+         12       I0         In       N$14
+         13       I1         In       N$18
+         14       VCC        Pwr      VCC
+
+IC6      1        O          Out      N$14
+         2        I0         In       CPU-PHI
+         3        I1         In       N$15
+         4        O          Out      PHI-OUT
+         5        I0         In       N$8
+         6        I1         In       N$4
+         7        GND        Pwr      GND
+         8        I0         In       N$19
+         9        I1         In       4MHZ
+         10       O          Out      N$4
+         11       I0         In       N$10
+         12       I1         In       N$32
+         13       O          Out      N$8
+         14       VCC        Pwr      VCC
+
+IC44     1        1          Pas      N$24
+         2        2          Pas      N$23
+         3        3          Pas               *** unconnected ***
+         4        4          Pas      N$21
+         5        5          Pas      N$20
+         6        6          Pas      N$17
+         7        7          Pas      N$28
+         8        8          Pas      N$25
+         9        9          Pas               *** unconnected ***
+         10       10         Pas      CPU-PHI
+         11       11         Pas               *** unconnected ***
+         12       12         Pas      N$26
+         13       13         Pas      PHI-OUT
+         14       14         Pas      N$27
+
+JP1      1        1          Pas      PHI2
+         2        2          Pas      PHI2-OUT
+         3        3          Pas      PHI0-IN
+
+JP2      1        1          Pas      VPB
+         2        2          Pas      N$1
+
+JP4      1        1          Pas      N$25
+         2        2          Pas      B0
+         3        3          Pas      CPU-PHI
+         4        4          Pas      !MS
+         5        5          Pas      N$26
+         6        6          Pas      4MHZ
+         7        7          Pas      N$27
+
+JP5      1        1          Pas      N$24
+         2        2          Pas      N$23
+         3        3          Pas      N$13
+         4        4          Pas      N$21
+         5        5          Pas      N$20
+         6        6          Pas      N$17
+         7        7          Pas      N$28
+
+JP8      1        1          Pas      N$13
+         2        2          Pas      VIDCLK
+
+JP9      1        1          Pas      NBUFFCTL
+         2        2          Pas               *** unconnected ***
+
+JP10     1        1          Pas      GND
+         2        2          Pas      BLKAEN
+         3        3          Pas      GND
+         4        4          Pas      DOSROMEN
+
+R1       1        1          Pas      BE
+         2        2          Pas      VCC
+
+R2       1        1          Pas      BLKAEN
+         2        2          Pas      VCC
+
+R3       1        1          Pas      DOSROMEN
+         2        2          Pas      VCC
+
+R4       1        1          Pas      NBUFFCTL
+         2        2          Pas      VCC
+
+R5       1        1          Pas      GND
+         2        2          Pas      N$19
+
+R6       1        1          Pas      GND
+         2        2          Pas      N$18
+
+R7       1        1          Pas      N$2
+         2        2          Pas      N$11
+
+R8       1        1          Pas      GND
+         2        2          Pas      MS
+
+R9       1        1          Pas      N$15
+         2        2          Pas      N$16
+
+SW1      1        LEFT       Pas               *** unconnected ***
+         2        COMMON     Pas      N$18
+         3        RIGHT      Pas      VCC
+         BODY     BODY       Pas               *** unconnected ***
+

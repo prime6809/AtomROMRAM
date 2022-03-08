@@ -1,0 +1,59 @@
+xst -intstyle ise -ifn "F:/Phill/Electronics/Xilinx/Atom_RAM_ROMbox/Mk2.0/RamRom.xst" -ofn "F:/Phill/Electronics/Xilinx/Atom_RAM_ROMbox/Mk2.0/RamRom.syr" 
+xst -intstyle ise -ifn "F:/Phill/Electronics/Xilinx/Atom_RAM_ROMbox/Mk2.0/RamRom.xst" -ofn "F:/Phill/Electronics/Xilinx/Atom_RAM_ROMbox/Mk2.0/RamRom.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc RamRom.ucf -p xc9536xl-PC44-5 RamRom.ngc RamRom.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc RamRom.ucf -p xc9536xl-PC44-5 RamRom.ngc RamRom.ngd  
+cpldfit -intstyle ise -p xc9536xl-5-PC44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper RamRom.ngd 
+XSLTProcess RamRom_build.xml 
+tsim -intstyle ise RamRom RamRom.nga 
+taengine -intstyle ise -f RamRom -w --format html1 -l RamRom_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n RamRom -i RamRom 
+hprep6 -s IEEE1149 -n RamRom -i RamRom 
+xst -intstyle ise -ifn "F:/Phill/Electronics/Xilinx/Atom_RAM_ROMbox/Mk2.0/RamRom.xst" -ofn "F:/Phill/Electronics/Xilinx/Atom_RAM_ROMbox/Mk2.0/RamRom.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc RamRom.ucf -p xc9536xl-PC44-5 RamRom.ngc RamRom.ngd  
+cpldfit -intstyle ise -p xc9536xl-5-PC44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper RamRom.ngd 
+XSLTProcess RamRom_build.xml 
+tsim -intstyle ise RamRom RamRom.nga 
+hprep6 -s IEEE1149 -n RamRom -i RamRom 
+xst -intstyle ise -ifn "F:/Phill/Electronics/Xilinx/Atom_RAM_ROMbox/Mk2.0/RamRom.xst" -ofn "F:/Phill/Electronics/Xilinx/Atom_RAM_ROMbox/Mk2.0/RamRom.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc RamRom.ucf -p xc9536xl-PC44-5 RamRom.ngc RamRom.ngd  
+cpldfit -intstyle ise -p xc9536xl-5-PC44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper RamRom.ngd 
+XSLTProcess RamRom_build.xml 
+tsim -intstyle ise RamRom RamRom.nga 
+hprep6 -s IEEE1149 -n RamRom -i RamRom 
+xst -intstyle ise -ifn "F:/Phill/Electronics/Xilinx/Atom_RAM_ROMbox/Mk2.0/RamRom.xst" -ofn "F:/Phill/Electronics/Xilinx/Atom_RAM_ROMbox/Mk2.0/RamRom.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc RamRom.ucf -p xc9536xl-PC44-5 RamRom.ngc RamRom.ngd  
+cpldfit -intstyle ise -p xc9536xl-5-PC44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper RamRom.ngd 
+XSLTProcess RamRom_build.xml 
+xst -intstyle ise -ifn "F:/Phill/Electronics/Xilinx/Atom_RAM_ROMbox/Mk2.0/RamRom.xst" -ofn "F:/Phill/Electronics/Xilinx/Atom_RAM_ROMbox/Mk2.0/RamRom.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc RamRom.ucf -p xc9536xl-PC44-5 RamRom.ngc RamRom.ngd  
+cpldfit -intstyle ise -p xc9536xl-5-PC44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper RamRom.ngd 
+XSLTProcess RamRom_build.xml 
+tsim -intstyle ise RamRom RamRom.nga 
+hprep6 -s IEEE1149 -n RamRom -i RamRom 
+xst -intstyle ise -ifn "F:/Phill/Electronics/Xilinx/Atom_RAM_ROMbox/Mk2.0/RamRom.xst" -ofn "F:/Phill/Electronics/Xilinx/Atom_RAM_ROMbox/Mk2.0/RamRom.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc RamRom.ucf -p xc9536xl-PC44-5 RamRom.ngc RamRom.ngd  
+cpldfit -intstyle ise -p xc9536xl-5-PC44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper RamRom.ngd 
+XSLTProcess RamRom_build.xml 
+tsim -intstyle ise RamRom RamRom.nga 
+hprep6 -s IEEE1149 -n RamRom -i RamRom 
+xst -intstyle ise -ifn "F:/Phill/Electronics/Xilinx/Atom_RAM_ROMbox/Mk2.0/RamRom.xst" -ofn "F:/Phill/Electronics/Xilinx/Atom_RAM_ROMbox/Mk2.0/RamRom.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc RamRom.ucf -p xc9536xl-PC44-5 RamRom.ngc RamRom.ngd  
+cpldfit -intstyle ise -p xc9536xl-5-PC44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper RamRom.ngd 
+XSLTProcess RamRom_build.xml 
+tsim -intstyle ise RamRom RamRom.nga 
+hprep6 -s IEEE1149 -n RamRom -i RamRom 
+xst -intstyle ise -ifn "F:/Phill/Electronics/Xilinx/Atom_RAM_ROMbox/Mk2.0/RamRom.xst" -ofn "F:/Phill/Electronics/Xilinx/Atom_RAM_ROMbox/Mk2.0/RamRom.syr" 
+xst -intstyle ise -ifn "F:/Phill/Electronics/Xilinx/Atom_RAM_ROMbox/Mk2.0/RamRom.xst" -ofn "F:/Phill/Electronics/Xilinx/Atom_RAM_ROMbox/Mk2.0/RamRom.syr" 
+xst -intstyle ise -ifn "F:/Phill/Electronics/Xilinx/Atom_RAM_ROMbox/Mk2.0/RamRom.xst" -ofn "F:/Phill/Electronics/Xilinx/Atom_RAM_ROMbox/Mk2.0/RamRom.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc RamRom.ucf -p xc9536xl-PC44-5 RamRom.ngc RamRom.ngd  
+cpldfit -intstyle ise -p xc9536xl-5-PC44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper RamRom.ngd 
+XSLTProcess RamRom_build.xml 
+tsim -intstyle ise RamRom RamRom.nga 
+hprep6 -s IEEE1149 -n RamRom -i RamRom 
+xst -intstyle ise -ifn "F:/Phill/Electronics/Xilinx_New/Atom/Atom_RAM_ROMbox/Mk3.0/RamRom.xst" -ofn "F:/Phill/Electronics/Xilinx_New/Atom/Atom_RAM_ROMbox/Mk3.0/RamRom.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc RamRom.ucf -p xc9536xl-VQ44-5 RamRom.ngc RamRom.ngd  
+cpldfit -intstyle ise -p xc9536xl-5-VQ44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper RamRom.ngd 
+XSLTProcess RamRom_build.xml 
+tsim -intstyle ise RamRom RamRom.nga 
+taengine -intstyle ise -f RamRom -w --format html1 -l RamRom_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n RamRom -i RamRom 

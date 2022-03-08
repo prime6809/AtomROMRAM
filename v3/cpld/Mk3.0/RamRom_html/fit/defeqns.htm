@@ -1,0 +1,216 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$FX_DC$22 <= (RW AND PHI2 AND Addr(6) AND Addr(5) AND Addr(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(3) AND Addr(2) AND Addr(0) AND Addr(9) AND Addr(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(7) AND Addr(15) AND Addr(13) AND Addr(12) AND Addr(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(10) AND NOT Addr(14));
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$FX_DC$23 <= (RW AND PHI2 AND Addr(6) AND Addr(5) AND Addr(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(3) AND Addr(2) AND Addr(0) AND Addr(9) AND Addr(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(7) AND Addr(15) AND Addr(13) AND Addr(12) AND Addr(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(10) AND NOT Addr(14));
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$FX_DC$36 <= (NOT RomLatch_0 AND NOT RomLatch_1 AND NOT RomLatch_2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT RomLatch_3 AND SwitchLatch(0));
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$FX_SC$24 <= ((NOT Addr(0) AND NOT Addr(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Addr(15) AND Addr(14)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Data_I(0) <= ((SwitchLatch(0) AND NOT $OpTx$FX_DC$23)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (RW AND PHI2 AND Addr(6) AND Addr(5) AND Addr(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(3) AND Addr(2) AND Addr(0) AND Addr(9) AND Addr(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(7) AND Addr(15) AND Addr(13) AND Addr(12) AND Addr(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(10) AND Addr(1) AND NOT Addr(14) AND RomLatch_0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data(0) <= Data_I(0) when Data_OE(0) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data_OE(0) <= (RW AND PHI2 AND Addr(6) AND Addr(5) AND Addr(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(3) AND Addr(2) AND Addr(9) AND Addr(8) AND Addr(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(15) AND Addr(13) AND Addr(12) AND Addr(11) AND Addr(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$FX_SC$24);
+</td></tr><tr><td>
+</td></tr><tr><td>
+Data_I(1) <= ((SwitchLatch(1) AND NOT $OpTx$FX_DC$23)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (RW AND PHI2 AND Addr(6) AND Addr(5) AND Addr(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(3) AND Addr(2) AND Addr(0) AND Addr(9) AND Addr(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(7) AND Addr(15) AND Addr(13) AND Addr(12) AND Addr(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(10) AND Addr(1) AND NOT Addr(14) AND RomLatch_1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data(1) <= Data_I(1) when Data_OE(1) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data_OE(1) <= (RW AND PHI2 AND Addr(6) AND Addr(5) AND Addr(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(3) AND Addr(2) AND Addr(9) AND Addr(8) AND Addr(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(15) AND Addr(13) AND Addr(12) AND Addr(11) AND Addr(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$FX_SC$24);
+</td></tr><tr><td>
+</td></tr><tr><td>
+Data_I(2) <= ((SwitchLatch(2) AND NOT $OpTx$FX_DC$22)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (RW AND PHI2 AND Addr(6) AND Addr(5) AND Addr(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(3) AND Addr(2) AND Addr(0) AND Addr(9) AND Addr(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(7) AND Addr(15) AND Addr(13) AND Addr(12) AND Addr(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(10) AND Addr(1) AND NOT Addr(14) AND RomLatch_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (RW AND PHI2 AND Addr(6) AND Addr(5) AND Addr(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(3) AND Addr(2) AND Addr(0) AND Addr(9) AND Addr(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(7) AND Addr(15) AND Addr(13) AND Addr(12) AND Addr(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(10) AND NOT Addr(1) AND NOT Addr(14) AND NOT DskROMSW));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data(2) <= Data_I(2) when Data_OE(2) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data_OE(2) <= (RW AND PHI2 AND Addr(6) AND Addr(5) AND Addr(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(3) AND Addr(2) AND Addr(9) AND Addr(8) AND Addr(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(15) AND Addr(13) AND Addr(12) AND Addr(11) AND Addr(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$FX_SC$24);
+</td></tr><tr><td>
+</td></tr><tr><td>
+Data_I(3) <= ((SwitchLatch(3) AND NOT $OpTx$FX_DC$22)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (RW AND PHI2 AND Addr(6) AND Addr(5) AND Addr(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(3) AND Addr(2) AND Addr(0) AND Addr(9) AND Addr(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(7) AND Addr(15) AND Addr(13) AND Addr(12) AND Addr(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(10) AND Addr(1) AND NOT Addr(14) AND RomLatch_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (RW AND PHI2 AND Addr(6) AND Addr(5) AND Addr(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(3) AND Addr(2) AND Addr(0) AND Addr(9) AND Addr(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(7) AND Addr(15) AND Addr(13) AND Addr(12) AND Addr(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(10) AND NOT Addr(1) AND NOT Addr(14) AND SpeedSW));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data(3) <= Data_I(3) when Data_OE(3) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data_OE(3) <= (RW AND PHI2 AND Addr(6) AND Addr(5) AND Addr(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(3) AND Addr(2) AND Addr(9) AND Addr(8) AND Addr(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(15) AND Addr(13) AND Addr(12) AND Addr(11) AND Addr(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$FX_SC$24);
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+NBuffCtl <= ((NRDS_OBUF.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Addr(9) AND NOT Addr(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Addr(12) AND Addr(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Addr(11) AND NOT Addr(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Addr(14) AND DskROMSW AND SwitchLatch(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Addr(14) AND NOT DskROMSW AND NOT SwitchLatch(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Addr(13) AND Addr(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Addr(12) AND NOT Addr(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Addr(15) AND NOT Addr(12) AND NOT Addr(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Addr(8) AND NOT Addr(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Addr(13) AND DskROMSW AND SwitchLatch(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Addr(13) AND NOT DskROMSW AND NOT SwitchLatch(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Addr(6) AND Addr(5) AND Addr(4) AND Addr(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(9) AND Addr(8) AND Addr(7) AND NOT Addr(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Addr(6) AND Addr(5) AND Addr(4) AND Addr(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(9) AND Addr(8) AND Addr(7) AND NOT Addr(14)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+NRAMCS <= ((Addr(9) AND NOT Addr(8) AND NOT Addr(13) AND NOT Addr(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(11) AND NOT Addr(10) AND NOT Addr(14) AND DskROMSW AND SwitchLatch(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Addr(9) AND NOT Addr(8) AND NOT Addr(13) AND NOT Addr(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(11) AND NOT Addr(10) AND NOT Addr(14) AND NOT DskROMSW AND NOT SwitchLatch(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Addr(15) AND NOT Addr(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Addr(15) AND Addr(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Addr(15) AND Addr(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Addr(15) AND NOT $OpTx$FX_DC$36)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Addr(13) AND Addr(12) AND Addr(14) AND SwitchLatch(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+NRDS <= NOT ((RW AND PHI2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+NROMCS <= NOT (((Addr(15) AND NOT Addr(13) AND Addr(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Addr(15) AND Addr(12) AND Addr(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Addr(15) AND Addr(14) AND DskROMSW AND SwitchLatch(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Addr(15) AND Addr(14) AND NOT DskROMSW AND NOT SwitchLatch(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Addr(15) AND Addr(13) AND NOT Addr(12) AND NOT Addr(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$FX_DC$36)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+NWDS <= NOT ((NOT RW AND PHI2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+RA(12) <= NOT (((NOT Addr(15) AND NOT Addr(12) AND NOT NRAMCS)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Addr(15) AND NRAMCS AND NOT RomLatch_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Addr(14) AND NRAMCS AND NOT RomLatch_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Addr(15) AND NOT Addr(12) AND Addr(14) AND NRAMCS)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+RA(13) <= NOT (((NOT Addr(15) AND NOT Addr(13) AND NOT NRAMCS)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Addr(15) AND NRAMCS AND NOT RomLatch_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Addr(14) AND NRAMCS AND NOT RomLatch_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Addr(15) AND NOT Addr(13) AND Addr(14) AND NRAMCS)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+RA(14) <= NOT (((NOT Addr(15) AND NOT Addr(14) AND NOT NRAMCS)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Addr(15) AND NRAMCS AND NOT RomLatch_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Addr(14) AND NRAMCS AND NOT RomLatch_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Addr(15) AND Addr(14) AND NRAMCS AND DskROMSW AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SwitchLatch(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Addr(15) AND Addr(14) AND NRAMCS AND NOT DskROMSW AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SwitchLatch(2))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+RA(15) <= ((NOT Addr(15) AND NRAMCS AND RomLatch_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Addr(14) AND NRAMCS AND RomLatch_3));
+</td></tr><tr><td>
+</td></tr><tr><td>
+RA(16) <= (Addr(15) AND Addr(14));
+</td></tr><tr><td>
+FDCPE_RomLatch_0: FDCPE port map (RomLatch_0,Data(0).PIN,RomLatch_0_C,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RomLatch_0_C <= NOT ((NOT RW AND PHI2 AND Addr(6) AND Addr(5) AND Addr(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(3) AND Addr(2) AND Addr(0) AND Addr(9) AND Addr(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(7) AND Addr(15) AND Addr(13) AND Addr(12) AND Addr(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(10) AND Addr(1) AND NOT Addr(14)));
+</td></tr><tr><td>
+FDCPE_RomLatch_1: FDCPE port map (RomLatch_1,Data(1).PIN,RomLatch_1_C,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RomLatch_1_C <= NOT ((NOT RW AND PHI2 AND Addr(6) AND Addr(5) AND Addr(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(3) AND Addr(2) AND Addr(0) AND Addr(9) AND Addr(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(7) AND Addr(15) AND Addr(13) AND Addr(12) AND Addr(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(10) AND Addr(1) AND NOT Addr(14)));
+</td></tr><tr><td>
+FDCPE_RomLatch_2: FDCPE port map (RomLatch_2,Data(2).PIN,RomLatch_2_C,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RomLatch_2_C <= NOT ((NOT RW AND PHI2 AND Addr(6) AND Addr(5) AND Addr(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(3) AND Addr(2) AND Addr(0) AND Addr(9) AND Addr(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(7) AND Addr(15) AND Addr(13) AND Addr(12) AND Addr(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(10) AND Addr(1) AND NOT Addr(14)));
+</td></tr><tr><td>
+FDCPE_RomLatch_3: FDCPE port map (RomLatch_3,Data(3).PIN,RomLatch_3_C,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RomLatch_3_C <= NOT ((NOT RW AND PHI2 AND Addr(6) AND Addr(5) AND Addr(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(3) AND Addr(2) AND Addr(0) AND Addr(9) AND Addr(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(7) AND Addr(15) AND Addr(13) AND Addr(12) AND Addr(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(10) AND Addr(1) AND NOT Addr(14)));
+</td></tr><tr><td>
+FDCPE_SwitchLatch0: FDCPE port map (SwitchLatch(0),Data(0).PIN,SwitchLatch_C(0),'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SwitchLatch_C(0) <= NOT ((NOT RW AND PHI2 AND Addr(6) AND Addr(5) AND Addr(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(3) AND Addr(2) AND NOT Addr(0) AND Addr(9) AND Addr(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(7) AND Addr(15) AND Addr(13) AND Addr(12) AND Addr(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(10) AND Addr(1) AND NOT Addr(14)));
+</td></tr><tr><td>
+FDCPE_SwitchLatch1: FDCPE port map (SwitchLatch(1),Data(1).PIN,SwitchLatch_C(1),'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SwitchLatch_C(1) <= NOT ((NOT RW AND PHI2 AND Addr(6) AND Addr(5) AND Addr(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(3) AND Addr(2) AND NOT Addr(0) AND Addr(9) AND Addr(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(7) AND Addr(15) AND Addr(13) AND Addr(12) AND Addr(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(10) AND Addr(1) AND NOT Addr(14)));
+</td></tr><tr><td>
+FDCPE_SwitchLatch2: FDCPE port map (SwitchLatch(2),Data(2).PIN,SwitchLatch_C(2),'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SwitchLatch_C(2) <= NOT ((NOT RW AND PHI2 AND Addr(6) AND Addr(5) AND Addr(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(3) AND Addr(2) AND NOT Addr(0) AND Addr(9) AND Addr(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(7) AND Addr(15) AND Addr(13) AND Addr(12) AND Addr(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(10) AND Addr(1) AND NOT Addr(14)));
+</td></tr><tr><td>
+FDCPE_SwitchLatch3: FDCPE port map (SwitchLatch(3),Data(3).PIN,SwitchLatch_C(3),'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SwitchLatch_C(3) <= NOT ((NOT RW AND PHI2 AND Addr(6) AND Addr(5) AND Addr(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(3) AND Addr(2) AND NOT Addr(0) AND Addr(9) AND Addr(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(7) AND Addr(15) AND Addr(13) AND Addr(12) AND Addr(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Addr(10) AND Addr(1) AND NOT Addr(14)));
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

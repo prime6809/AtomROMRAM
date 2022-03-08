@@ -1,0 +1,5 @@
+# begin LFP file F:\Phill\Electronics\Xilinx_New\Atom\Atom_RAM_ROMbox\Mk3.0\RamRom.lfp
+designfile RamRom.v
+parttype xc9536xl-vq44-5
+bus_delimiter 0;
+set_busdelim_onsave 1;

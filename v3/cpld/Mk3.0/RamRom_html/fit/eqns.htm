@@ -1,0 +1,465 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="paths.js"></script><script src="eqns.js"></script><script>
+      var design = "RamRom";
+      var device = "XC9536XL";
+      signals = new Array("Data0_SPECSIG","Data1_SPECSIG","Data2_SPECSIG","Data3_SPECSIG","NBuffCtl","NRAMCS","NRDS","NROMCS","NWDS","OpTxFX_DC22_SPECSIG","OpTxFX_DC23_SPECSIG","OpTxFX_DC36_SPECSIG","OpTxFX_SC24_SPECSIG","RA12_SPECSIG","RA13_SPECSIG","RA14_SPECSIG","RA15_SPECSIG","RA16_SPECSIG","RomLatch_0","RomLatch_1","RomLatch_2","RomLatch_3","SwitchLatch0_SPECSIG","SwitchLatch1_SPECSIG","SwitchLatch2_SPECSIG","SwitchLatch3_SPECSIG");
+      sigNegs = new Array("OFF","OFF","OFF","OFF","OFF","OFF","ON","ON","ON","OFF","OFF","OFF","OFF","ON","ON","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF");
+      sigTypes = new Array("","","","","","","","","","","","","","","","","","","D","D","D","D","D","D","D","D");
+
+      
+        specSig["Addr6_SPECSIG"]=new Array("Addr<6>");
+      
+        specSig["Addr5_SPECSIG"]=new Array("Addr<5>");
+      
+        specSig["Addr4_SPECSIG"]=new Array("Addr<4>");
+      
+        specSig["Addr3_SPECSIG"]=new Array("Addr<3>");
+      
+        specSig["Addr2_SPECSIG"]=new Array("Addr<2>");
+      
+        specSig["Addr0_SPECSIG"]=new Array("Addr<0>");
+      
+        specSig["Addr9_SPECSIG"]=new Array("Addr<9>");
+      
+        specSig["Addr8_SPECSIG"]=new Array("Addr<8>");
+      
+        specSig["Addr7_SPECSIG"]=new Array("Addr<7>");
+      
+        specSig["Addr15_SPECSIG"]=new Array("Addr<15>");
+      
+        specSig["Addr13_SPECSIG"]=new Array("Addr<13>");
+      
+        specSig["Addr12_SPECSIG"]=new Array("Addr<12>");
+      
+        specSig["Addr11_SPECSIG"]=new Array("Addr<11>");
+      
+        specSig["Addr10_SPECSIG"]=new Array("Addr<10>");
+      
+        specSig["Addr1_SPECSIG"]=new Array("Addr<1>");
+      
+        specSig["Addr14_SPECSIG"]=new Array("Addr<14>");
+      
+        specSig["Data0PIN_SPECSIG"]=new Array("Data<0>.PIN");
+      
+        specSig["Data1PIN_SPECSIG"]=new Array("Data<1>.PIN");
+      
+        specSig["Data2PIN_SPECSIG"]=new Array("Data<2>.PIN");
+      
+        specSig["Data3PIN_SPECSIG"]=new Array("Data<3>.PIN");
+      
+        specSig["IO_SPECSIG"]=new Array("I/O");
+      
+        specSig["Data2_SPECSIG"]=new Array("Data<2>");
+      
+        specSig["Data0_SPECSIG"]=new Array("Data<0>");
+      
+        specSig["Data1_SPECSIG"]=new Array("Data<1>");
+      
+        specSig["RA14_SPECSIG"]=new Array("RA<14>");
+      
+        specSig["RA16_SPECSIG"]=new Array("RA<16>");
+      
+        specSig["RA15_SPECSIG"]=new Array("RA<15>");
+      
+        specSig["RA12_SPECSIG"]=new Array("RA<12>");
+      
+        specSig["Data3_SPECSIG"]=new Array("Data<3>");
+      
+        specSig["RA13_SPECSIG"]=new Array("RA<13>");
+      
+        specSig["SwitchLatch1_SPECSIG"]=new Array("SwitchLatch<1>");
+      
+        specSig["SwitchLatch0_SPECSIG"]=new Array("SwitchLatch<0>");
+      
+        specSig["OpTxFX_DC22_SPECSIG"]=new Array("$OpTx$FX_DC$22");
+      
+        specSig["OpTxFX_DC23_SPECSIG"]=new Array("$OpTx$FX_DC$23");
+      
+        specSig["OpTxFX_DC36_SPECSIG"]=new Array("$OpTx$FX_DC$36");
+      
+        specSig["OpTxFX_SC24_SPECSIG"]=new Array("$OpTx$FX_SC$24");
+      
+        specSig["SwitchLatch2_SPECSIG"]=new Array("SwitchLatch<2>");
+      
+        specSig["SwitchLatch3_SPECSIG"]=new Array("SwitchLatch<3>");
+      
+            pterms["FB1_1_1"]=new Array("SwitchLatch2_SPECSIG","/OpTxFX_DC22_SPECSIG");
+          
+            pterms["FB1_1_2"]=new Array("RW","PHI2","Addr6_SPECSIG","Addr5_SPECSIG","Addr4_SPECSIG","Addr3_SPECSIG","Addr2_SPECSIG","Addr0_SPECSIG","Addr9_SPECSIG","Addr8_SPECSIG","Addr7_SPECSIG","Addr15_SPECSIG","Addr13_SPECSIG","Addr12_SPECSIG","Addr11_SPECSIG","Addr10_SPECSIG","Addr1_SPECSIG","/Addr14_SPECSIG","RomLatch_2");
+          
+            pterms["FB1_1_3"]=new Array("RW","PHI2","Addr6_SPECSIG","Addr5_SPECSIG","Addr4_SPECSIG","Addr3_SPECSIG","Addr2_SPECSIG","Addr0_SPECSIG","Addr9_SPECSIG","Addr8_SPECSIG","Addr7_SPECSIG","Addr15_SPECSIG","Addr13_SPECSIG","Addr12_SPECSIG","Addr11_SPECSIG","Addr10_SPECSIG","/Addr1_SPECSIG","/Addr14_SPECSIG","/DskROMSW");
+          
+            pterms["FB1_1_4"]=new Array("RW","PHI2","Addr6_SPECSIG","Addr5_SPECSIG","Addr4_SPECSIG","Addr3_SPECSIG","Addr2_SPECSIG","Addr9_SPECSIG","Addr8_SPECSIG","Addr7_SPECSIG","Addr15_SPECSIG","Addr13_SPECSIG","Addr12_SPECSIG","Addr11_SPECSIG","Addr10_SPECSIG","/OpTxFX_SC24_SPECSIG");
+          
+            pterms["FB1_2_1"]=new Array("Data1PIN_SPECSIG");
+          
+            pterms["FB1_2_2"]=new Array("/RW","PHI2","Addr6_SPECSIG","Addr5_SPECSIG","Addr4_SPECSIG","Addr3_SPECSIG","Addr2_SPECSIG","/Addr0_SPECSIG","Addr9_SPECSIG","Addr8_SPECSIG","Addr7_SPECSIG","Addr15_SPECSIG","Addr13_SPECSIG","Addr12_SPECSIG","Addr11_SPECSIG","Addr10_SPECSIG","Addr1_SPECSIG","/Addr14_SPECSIG");
+          
+            pterms["FB1_3_1"]=new Array("SwitchLatch0_SPECSIG","/OpTxFX_DC23_SPECSIG");
+          
+            pterms["FB1_3_2"]=new Array("RW","PHI2","Addr6_SPECSIG","Addr5_SPECSIG","Addr4_SPECSIG","Addr3_SPECSIG","Addr2_SPECSIG","Addr0_SPECSIG","Addr9_SPECSIG","Addr8_SPECSIG","Addr7_SPECSIG","Addr15_SPECSIG","Addr13_SPECSIG","Addr12_SPECSIG","Addr11_SPECSIG","Addr10_SPECSIG","Addr1_SPECSIG","/Addr14_SPECSIG","RomLatch_0");
+          
+            pterms["FB1_3_3"]=new Array("RW","PHI2","Addr6_SPECSIG","Addr5_SPECSIG","Addr4_SPECSIG","Addr3_SPECSIG","Addr2_SPECSIG","Addr9_SPECSIG","Addr8_SPECSIG","Addr7_SPECSIG","Addr15_SPECSIG","Addr13_SPECSIG","Addr12_SPECSIG","Addr11_SPECSIG","Addr10_SPECSIG","/OpTxFX_SC24_SPECSIG");
+          
+            pterms["FB1_4_1"]=new Array("SwitchLatch1_SPECSIG","/OpTxFX_DC23_SPECSIG");
+          
+            pterms["FB1_4_2"]=new Array("RW","PHI2","Addr6_SPECSIG","Addr5_SPECSIG","Addr4_SPECSIG","Addr3_SPECSIG","Addr2_SPECSIG","Addr0_SPECSIG","Addr9_SPECSIG","Addr8_SPECSIG","Addr7_SPECSIG","Addr15_SPECSIG","Addr13_SPECSIG","Addr12_SPECSIG","Addr11_SPECSIG","Addr10_SPECSIG","Addr1_SPECSIG","/Addr14_SPECSIG","RomLatch_1");
+          
+            pterms["FB1_4_3"]=new Array("RW","PHI2","Addr6_SPECSIG","Addr5_SPECSIG","Addr4_SPECSIG","Addr3_SPECSIG","Addr2_SPECSIG","Addr9_SPECSIG","Addr8_SPECSIG","Addr7_SPECSIG","Addr15_SPECSIG","Addr13_SPECSIG","Addr12_SPECSIG","Addr11_SPECSIG","Addr10_SPECSIG","/OpTxFX_SC24_SPECSIG");
+          
+            pterms["FB1_5_1"]=new Array("Data0PIN_SPECSIG");
+          
+            pterms["FB1_5_2"]=new Array("/RW","PHI2","Addr6_SPECSIG","Addr5_SPECSIG","Addr4_SPECSIG","Addr3_SPECSIG","Addr2_SPECSIG","/Addr0_SPECSIG","Addr9_SPECSIG","Addr8_SPECSIG","Addr7_SPECSIG","Addr15_SPECSIG","Addr13_SPECSIG","Addr12_SPECSIG","Addr11_SPECSIG","Addr10_SPECSIG","Addr1_SPECSIG","/Addr14_SPECSIG");
+          
+            pterms["FB1_6_1"]=new Array("Addr15_SPECSIG","/Addr13_SPECSIG","Addr14_SPECSIG");
+          
+            pterms["FB1_6_2"]=new Array("Addr15_SPECSIG","Addr12_SPECSIG","Addr14_SPECSIG");
+          
+            pterms["FB1_6_3"]=new Array("Addr15_SPECSIG","Addr14_SPECSIG","DskROMSW","SwitchLatch2_SPECSIG");
+          
+            pterms["FB1_6_4"]=new Array("Addr15_SPECSIG","Addr14_SPECSIG","/DskROMSW","/SwitchLatch2_SPECSIG");
+          
+            pterms["FB1_6_5"]=new Array("Addr15_SPECSIG","Addr13_SPECSIG","/Addr12_SPECSIG","/Addr14_SPECSIG","/OpTxFX_DC36_SPECSIG");
+          
+            pterms["FB1_7_1"]=new Array("Addr15_SPECSIG","/Addr13_SPECSIG");
+          
+            pterms["FB1_7_2"]=new Array("Addr15_SPECSIG","Addr12_SPECSIG");
+          
+            pterms["FB1_7_3"]=new Array("Addr15_SPECSIG","Addr14_SPECSIG");
+          
+            pterms["FB1_7_4"]=new Array("Addr15_SPECSIG","/OpTxFX_DC36_SPECSIG");
+          
+            pterms["FB1_7_5"]=new Array("Addr13_SPECSIG","Addr12_SPECSIG","Addr14_SPECSIG","SwitchLatch0_SPECSIG");
+          
+            pterms["FB1_8_1"]=new Array("Data2PIN_SPECSIG");
+          
+            pterms["FB1_8_2"]=new Array("/RW","PHI2","Addr6_SPECSIG","Addr5_SPECSIG","Addr4_SPECSIG","Addr3_SPECSIG","Addr2_SPECSIG","Addr0_SPECSIG","Addr9_SPECSIG","Addr8_SPECSIG","Addr7_SPECSIG","Addr15_SPECSIG","Addr13_SPECSIG","Addr12_SPECSIG","Addr11_SPECSIG","Addr10_SPECSIG","Addr1_SPECSIG","/Addr14_SPECSIG");
+          
+            pterms["FB1_8_3"]=new Array("Addr9_SPECSIG","/Addr8_SPECSIG","/Addr13_SPECSIG","/Addr12_SPECSIG","Addr11_SPECSIG","/Addr10_SPECSIG","/Addr14_SPECSIG","DskROMSW","SwitchLatch1_SPECSIG");
+          
+            pterms["FB1_8_4"]=new Array("Addr9_SPECSIG","/Addr8_SPECSIG","/Addr13_SPECSIG","/Addr12_SPECSIG","Addr11_SPECSIG","/Addr10_SPECSIG","/Addr14_SPECSIG","/DskROMSW","/SwitchLatch1_SPECSIG");
+          
+            pterms["FB1_9_1"]=new Array("RW","PHI2");
+          
+            pterms["FB1_9_2"]=new Array("/Addr15_SPECSIG","Addr13_SPECSIG");
+          
+            pterms["FB1_9_3"]=new Array("/Addr13_SPECSIG","Addr14_SPECSIG");
+          
+            pterms["FB1_9_4"]=new Array("Addr6_SPECSIG","Addr5_SPECSIG","Addr4_SPECSIG","Addr9_SPECSIG","Addr8_SPECSIG","Addr7_SPECSIG","/OpTxFX_SC24_SPECSIG");
+          
+            pterms["FB1_10_1"]=new Array("/Addr9_SPECSIG","/Addr13_SPECSIG");
+          
+            pterms["FB1_10_2"]=new Array("Addr12_SPECSIG","Addr14_SPECSIG");
+          
+            pterms["FB1_10_3"]=new Array("/Addr11_SPECSIG","/Addr14_SPECSIG");
+          
+            pterms["FB1_10_4"]=new Array("Addr14_SPECSIG","DskROMSW","SwitchLatch2_SPECSIG");
+          
+            pterms["FB1_10_5"]=new Array("Addr14_SPECSIG","/DskROMSW","/SwitchLatch2_SPECSIG");
+          
+            pterms["FB1_11_1"]=new Array("Addr8_SPECSIG","/Addr13_SPECSIG");
+          
+            pterms["FB1_11_2"]=new Array("/Addr13_SPECSIG","DskROMSW","SwitchLatch1_SPECSIG");
+          
+            pterms["FB1_11_3"]=new Array("/Addr13_SPECSIG","/DskROMSW","/SwitchLatch1_SPECSIG");
+          
+            pterms["FB1_11_4"]=new Array("Addr6_SPECSIG","Addr5_SPECSIG","Addr4_SPECSIG","Addr3_SPECSIG","Addr9_SPECSIG","Addr8_SPECSIG","Addr7_SPECSIG","/Addr14_SPECSIG");
+          
+            pterms["FB1_11_5"]=new Array("Addr6_SPECSIG","Addr5_SPECSIG","Addr4_SPECSIG","Addr2_SPECSIG","Addr9_SPECSIG","Addr8_SPECSIG","Addr7_SPECSIG","/Addr14_SPECSIG");
+          
+            pterms["FB1_12_1"]=new Array("Data1PIN_SPECSIG");
+          
+            pterms["FB1_12_2"]=new Array("/RW","PHI2","Addr6_SPECSIG","Addr5_SPECSIG","Addr4_SPECSIG","Addr3_SPECSIG","Addr2_SPECSIG","Addr0_SPECSIG","Addr9_SPECSIG","Addr8_SPECSIG","Addr7_SPECSIG","Addr15_SPECSIG","Addr13_SPECSIG","Addr12_SPECSIG","Addr11_SPECSIG","Addr10_SPECSIG","Addr1_SPECSIG","/Addr14_SPECSIG");
+          
+            pterms["FB1_12_3"]=new Array("/Addr13_SPECSIG","Addr10_SPECSIG");
+          
+            pterms["FB1_12_4"]=new Array("Addr12_SPECSIG","/Addr10_SPECSIG");
+          
+            pterms["FB1_12_5"]=new Array("Addr15_SPECSIG","/Addr12_SPECSIG","/Addr14_SPECSIG");
+          
+            pterms["FB1_13_1"]=new Array("/RW","PHI2");
+          
+            pterms["FB1_14_1"]=new Array("/Addr15_SPECSIG","/Addr14_SPECSIG","/NRAMCS");
+          
+            pterms["FB1_14_2"]=new Array("/Addr15_SPECSIG","NRAMCS","/RomLatch_2");
+          
+            pterms["FB1_14_3"]=new Array("/Addr14_SPECSIG","NRAMCS","/RomLatch_2");
+          
+            pterms["FB1_14_4"]=new Array("Addr15_SPECSIG","Addr14_SPECSIG","NRAMCS","DskROMSW","SwitchLatch2_SPECSIG");
+          
+            pterms["FB1_14_5"]=new Array("Addr15_SPECSIG","Addr14_SPECSIG","NRAMCS","/DskROMSW","/SwitchLatch2_SPECSIG");
+          
+            pterms["FB1_15_1"]=new Array("Addr15_SPECSIG","Addr14_SPECSIG");
+          
+            pterms["FB1_16_1"]=new Array("/Addr15_SPECSIG","NRAMCS","RomLatch_3");
+          
+            pterms["FB1_16_2"]=new Array("/Addr14_SPECSIG","NRAMCS","RomLatch_3");
+          
+            pterms["FB1_17_1"]=new Array("/Addr15_SPECSIG","/Addr12_SPECSIG","/NRAMCS");
+          
+            pterms["FB1_17_2"]=new Array("/Addr15_SPECSIG","NRAMCS","/RomLatch_0");
+          
+            pterms["FB1_17_3"]=new Array("/Addr14_SPECSIG","NRAMCS","/RomLatch_0");
+          
+            pterms["FB1_17_4"]=new Array("Addr15_SPECSIG","/Addr12_SPECSIG","Addr14_SPECSIG","NRAMCS");
+          
+            pterms["FB1_18_1"]=new Array("Data0PIN_SPECSIG");
+          
+            pterms["FB1_18_2"]=new Array("/RW","PHI2","Addr6_SPECSIG","Addr5_SPECSIG","Addr4_SPECSIG","Addr3_SPECSIG","Addr2_SPECSIG","Addr0_SPECSIG","Addr9_SPECSIG","Addr8_SPECSIG","Addr7_SPECSIG","Addr15_SPECSIG","Addr13_SPECSIG","Addr12_SPECSIG","Addr11_SPECSIG","Addr10_SPECSIG","Addr1_SPECSIG","/Addr14_SPECSIG");
+          
+            pterms["FB2_2_1"]=new Array("SwitchLatch3_SPECSIG","/OpTxFX_DC22_SPECSIG");
+          
+            pterms["FB2_2_2"]=new Array("RW","PHI2","Addr6_SPECSIG","Addr5_SPECSIG","Addr4_SPECSIG","Addr3_SPECSIG","Addr2_SPECSIG","Addr0_SPECSIG","Addr9_SPECSIG","Addr8_SPECSIG","Addr7_SPECSIG","Addr15_SPECSIG","Addr13_SPECSIG","Addr12_SPECSIG","Addr11_SPECSIG","Addr10_SPECSIG","Addr1_SPECSIG","/Addr14_SPECSIG","RomLatch_3");
+          
+            pterms["FB2_2_3"]=new Array("RW","PHI2","Addr6_SPECSIG","Addr5_SPECSIG","Addr4_SPECSIG","Addr3_SPECSIG","Addr2_SPECSIG","Addr0_SPECSIG","Addr9_SPECSIG","Addr8_SPECSIG","Addr7_SPECSIG","Addr15_SPECSIG","Addr13_SPECSIG","Addr12_SPECSIG","Addr11_SPECSIG","Addr10_SPECSIG","/Addr1_SPECSIG","/Addr14_SPECSIG","SpeedSW");
+          
+            pterms["FB2_2_4"]=new Array("RW","PHI2","Addr6_SPECSIG","Addr5_SPECSIG","Addr4_SPECSIG","Addr3_SPECSIG","Addr2_SPECSIG","Addr9_SPECSIG","Addr8_SPECSIG","Addr7_SPECSIG","Addr15_SPECSIG","Addr13_SPECSIG","Addr12_SPECSIG","Addr11_SPECSIG","Addr10_SPECSIG","/OpTxFX_SC24_SPECSIG");
+          
+            pterms["FB2_11_1"]=new Array("/RomLatch_0","/RomLatch_1","/RomLatch_2","/RomLatch_3","SwitchLatch0_SPECSIG");
+          
+            pterms["FB2_12_1"]=new Array("RW","PHI2","Addr6_SPECSIG","Addr5_SPECSIG","Addr4_SPECSIG","Addr3_SPECSIG","Addr2_SPECSIG","Addr0_SPECSIG","Addr9_SPECSIG","Addr8_SPECSIG","Addr7_SPECSIG","Addr15_SPECSIG","Addr13_SPECSIG","Addr12_SPECSIG","Addr11_SPECSIG","Addr10_SPECSIG","/Addr14_SPECSIG");
+          
+            pterms["FB2_13_1"]=new Array("RW","PHI2","Addr6_SPECSIG","Addr5_SPECSIG","Addr4_SPECSIG","Addr3_SPECSIG","Addr2_SPECSIG","Addr0_SPECSIG","Addr9_SPECSIG","Addr8_SPECSIG","Addr7_SPECSIG","Addr15_SPECSIG","Addr13_SPECSIG","Addr12_SPECSIG","Addr11_SPECSIG","Addr10_SPECSIG","/Addr14_SPECSIG");
+          
+            pterms["FB2_14_1"]=new Array("Data3PIN_SPECSIG");
+          
+            pterms["FB2_14_2"]=new Array("/RW","PHI2","Addr6_SPECSIG","Addr5_SPECSIG","Addr4_SPECSIG","Addr3_SPECSIG","Addr2_SPECSIG","/Addr0_SPECSIG","Addr9_SPECSIG","Addr8_SPECSIG","Addr7_SPECSIG","Addr15_SPECSIG","Addr13_SPECSIG","Addr12_SPECSIG","Addr11_SPECSIG","Addr10_SPECSIG","Addr1_SPECSIG","/Addr14_SPECSIG");
+          
+            pterms["FB2_15_1"]=new Array("Data2PIN_SPECSIG");
+          
+            pterms["FB2_15_2"]=new Array("/RW","PHI2","Addr6_SPECSIG","Addr5_SPECSIG","Addr4_SPECSIG","Addr3_SPECSIG","Addr2_SPECSIG","/Addr0_SPECSIG","Addr9_SPECSIG","Addr8_SPECSIG","Addr7_SPECSIG","Addr15_SPECSIG","Addr13_SPECSIG","Addr12_SPECSIG","Addr11_SPECSIG","Addr10_SPECSIG","Addr1_SPECSIG","/Addr14_SPECSIG");
+          
+            pterms["FB2_16_1"]=new Array("/Addr15_SPECSIG","/Addr13_SPECSIG","/NRAMCS");
+          
+            pterms["FB2_16_2"]=new Array("/Addr15_SPECSIG","NRAMCS","/RomLatch_1");
+          
+            pterms["FB2_16_3"]=new Array("/Addr14_SPECSIG","NRAMCS","/RomLatch_1");
+          
+            pterms["FB2_16_4"]=new Array("Addr15_SPECSIG","/Addr13_SPECSIG","Addr14_SPECSIG","NRAMCS");
+          
+            pterms["FB2_17_1"]=new Array("Data3PIN_SPECSIG");
+          
+            pterms["FB2_17_2"]=new Array("/RW","PHI2","Addr6_SPECSIG","Addr5_SPECSIG","Addr4_SPECSIG","Addr3_SPECSIG","Addr2_SPECSIG","Addr0_SPECSIG","Addr9_SPECSIG","Addr8_SPECSIG","Addr7_SPECSIG","Addr15_SPECSIG","Addr13_SPECSIG","Addr12_SPECSIG","Addr11_SPECSIG","Addr10_SPECSIG","Addr1_SPECSIG","/Addr14_SPECSIG");
+          
+            pterms["FB2_18_1"]=new Array("/Addr0_SPECSIG","/Addr1_SPECSIG");
+          
+            pterms["FB2_18_2"]=new Array("Addr15_SPECSIG","Addr14_SPECSIG");
+          
+          d2["Data2_SPECSIG"]=new Array("FB1_1_1","FB1_1_2","FB1_1_3");
+          
+            d2imp["Data2_SPECSIG"]=new Array("1","1","1");
+          
+              trst["Data2_SPECSIG"]=new Array("FB1_1_4");
+              
+                trstimp["Data2_SPECSIG"]=new Array("1");
+              
+          d2["SwitchLatch1_SPECSIG"]=new Array("FB1_2_1");
+          
+            d2imp["SwitchLatch1_SPECSIG"]=new Array("1");
+          
+              clk["SwitchLatch1_SPECSIG"]=new Array("FB1_2_2");
+              
+                clkimp["SwitchLatch1_SPECSIG"]=new Array("1");
+              prld["SwitchLatch1_SPECSIG"]="GND";
+          d2["Data0_SPECSIG"]=new Array("FB1_3_1","FB1_3_2");
+          
+            d2imp["Data0_SPECSIG"]=new Array("1","1");
+          
+              trst["Data0_SPECSIG"]=new Array("FB1_3_3");
+              
+                trstimp["Data0_SPECSIG"]=new Array("1");
+              
+          d2["Data1_SPECSIG"]=new Array("FB1_4_1","FB1_4_2");
+          
+            d2imp["Data1_SPECSIG"]=new Array("1","1");
+          
+              trst["Data1_SPECSIG"]=new Array("FB1_4_3");
+              
+                trstimp["Data1_SPECSIG"]=new Array("1");
+              
+          d2["SwitchLatch0_SPECSIG"]=new Array("FB1_5_1");
+          
+            d2imp["SwitchLatch0_SPECSIG"]=new Array("1");
+          
+              clk["SwitchLatch0_SPECSIG"]=new Array("FB1_5_2");
+              
+                clkimp["SwitchLatch0_SPECSIG"]=new Array("1");
+              prld["SwitchLatch0_SPECSIG"]="GND";
+          d2["NROMCS"]=new Array("FB1_6_1","FB1_6_2","FB1_6_3","FB1_6_4","FB1_6_5");
+          
+            d2imp["NROMCS"]=new Array("1","1","1","1","1");
+          
+          d2["NRAMCS"]=new Array("FB1_7_1","FB1_7_2","FB1_7_3","FB1_7_4","FB1_7_5","FB1_8_3","FB1_8_4");
+          
+            d2imp["NRAMCS"]=new Array("1","1","1","1","1","1","1");
+          
+          d2["RomLatch_2"]=new Array("FB1_8_1");
+          
+            d2imp["RomLatch_2"]=new Array("1");
+          
+              clk["RomLatch_2"]=new Array("FB1_8_2");
+              
+                clkimp["RomLatch_2"]=new Array("1");
+              prld["RomLatch_2"]="GND";
+          d2["NRDS"]=new Array("FB1_9_1");
+          
+            d2imp["NRDS"]=new Array("1");
+          
+          d2["NBuffCtl"]=new Array("FB1_11_1","FB1_11_2","FB1_11_3","FB1_11_4","FB1_11_5","FB1_10_1","FB1_10_2","FB1_10_3","FB1_10_4","FB1_10_5","FB1_9_2","FB1_9_3","FB1_9_4","FB1_12_3","FB1_12_4","FB1_12_5");
+          
+            d2imp["NBuffCtl"]=new Array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1");
+          
+          d2["RomLatch_1"]=new Array("FB1_12_1");
+          
+            d2imp["RomLatch_1"]=new Array("1");
+          
+              clk["RomLatch_1"]=new Array("FB1_12_2");
+              
+                clkimp["RomLatch_1"]=new Array("1");
+              prld["RomLatch_1"]="GND";
+          d2["NWDS"]=new Array("FB1_13_1");
+          
+            d2imp["NWDS"]=new Array("1");
+          
+          d2["RA14_SPECSIG"]=new Array("FB1_14_1","FB1_14_2","FB1_14_3","FB1_14_4","FB1_14_5");
+          
+            d2imp["RA14_SPECSIG"]=new Array("1","1","1","1","1");
+          
+          d2["RA16_SPECSIG"]=new Array("FB1_15_1");
+          
+            d2imp["RA16_SPECSIG"]=new Array("1");
+          
+          d2["RA15_SPECSIG"]=new Array("FB1_16_1","FB1_16_2");
+          
+            d2imp["RA15_SPECSIG"]=new Array("1","1");
+          
+          d2["RA12_SPECSIG"]=new Array("FB1_17_1","FB1_17_2","FB1_17_3","FB1_17_4");
+          
+            d2imp["RA12_SPECSIG"]=new Array("1","1","1","1");
+          
+          d2["RomLatch_0"]=new Array("FB1_18_1");
+          
+            d2imp["RomLatch_0"]=new Array("1");
+          
+              clk["RomLatch_0"]=new Array("FB1_18_2");
+              
+                clkimp["RomLatch_0"]=new Array("1");
+              prld["RomLatch_0"]="GND";
+          d2["Data3_SPECSIG"]=new Array("FB2_2_1","FB2_2_2","FB2_2_3");
+          
+            d2imp["Data3_SPECSIG"]=new Array("1","1","1");
+          
+              trst["Data3_SPECSIG"]=new Array("FB2_2_4");
+              
+                trstimp["Data3_SPECSIG"]=new Array("1");
+              
+          d2["OpTxFX_DC36_SPECSIG"]=new Array("FB2_11_1");
+          
+            d2imp["OpTxFX_DC36_SPECSIG"]=new Array("1");
+          
+          d2["OpTxFX_DC23_SPECSIG"]=new Array("FB2_12_1");
+          
+            d2imp["OpTxFX_DC23_SPECSIG"]=new Array("1");
+          
+          d2["OpTxFX_DC22_SPECSIG"]=new Array("FB2_13_1");
+          
+            d2imp["OpTxFX_DC22_SPECSIG"]=new Array("1");
+          
+          d2["SwitchLatch3_SPECSIG"]=new Array("FB2_14_1");
+          
+            d2imp["SwitchLatch3_SPECSIG"]=new Array("1");
+          
+              clk["SwitchLatch3_SPECSIG"]=new Array("FB2_14_2");
+              
+                clkimp["SwitchLatch3_SPECSIG"]=new Array("1");
+              prld["SwitchLatch3_SPECSIG"]="GND";
+          d2["SwitchLatch2_SPECSIG"]=new Array("FB2_15_1");
+          
+            d2imp["SwitchLatch2_SPECSIG"]=new Array("1");
+          
+              clk["SwitchLatch2_SPECSIG"]=new Array("FB2_15_2");
+              
+                clkimp["SwitchLatch2_SPECSIG"]=new Array("1");
+              prld["SwitchLatch2_SPECSIG"]="GND";
+          d2["RA13_SPECSIG"]=new Array("FB2_16_1","FB2_16_2","FB2_16_3","FB2_16_4");
+          
+            d2imp["RA13_SPECSIG"]=new Array("1","1","1","1");
+          
+          d2["RomLatch_3"]=new Array("FB2_17_1");
+          
+            d2imp["RomLatch_3"]=new Array("1");
+          
+              clk["RomLatch_3"]=new Array("FB2_17_2");
+              
+                clkimp["RomLatch_3"]=new Array("1");
+              prld["RomLatch_3"]="GND";
+          d2["OpTxFX_SC24_SPECSIG"]=new Array("FB2_18_1","FB2_18_2");
+          
+            d2imp["OpTxFX_SC24_SPECSIG"]=new Array("1","1");
+          
+
+      uimSignals = new Array();
+
+      uimSigNegs = new Array();
+
+      uimPterms = new Array();
+      
+
+      
+        function getEqnList() {
+          var str = "<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>";
+          str += "<center><h3>Equations</h3></center>";
+          str += "<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>";
+          for (s=0; s<uimSignals.length; s++) {
+            str += "<tr><td>";
+            str += retUimEqn(uimSignals[s]);
+            str += "</td></tr>";
+          }
+          for (s=0; s<signals.length; s++) {
+            str += "<tr><td>";
+            str += retEqn(signals[s]);
+            str += "</td></tr>";
+          }
+
+          var legend = retLegend();
+		      if (legend != "") {
+		        str += "<tr><td>" + legend + "</td></tr>";
+		      }
+
+          str += "</table>";
+          str += "<form><span class='pgRef'>";
+
+          if (!parent.leftnav.IsNS()) {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><input type='button' value='back to top' ";
+            str += "onclick='javascript:parent.leftnav.showEqnAll()' ";
+            str += "onmouseover=\"window.status='goto top of page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<input type='button' value='print page' ";
+            str += "onclick='javascript:window.print()' ";
+            str += "onmouseover=\"window.status='print page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+          else {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><a href='javascript:parent.leftnav.showEqnAll()'>back to top</a>";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<a href='javascript:window.print()'>";
+            str += "print page</a>";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+
+          str += "</span></form>";
+          str += "</body></html>";
+          return str;
+        }
+      
+    </script>
+</head></html>

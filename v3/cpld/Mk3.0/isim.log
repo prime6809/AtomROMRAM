@@ -1,0 +1,75 @@
+ISim log file
+Running: F:\Phill\Electronics\Xilinx\Atom-RAM-ROMbox\Mk1.3\RamRom_isim_beh.exe -gui -tclbatch isim.cmd -wdb F:/Phill/Electronics/Xilinx/Atom-RAM-ROMbox/Mk1.3/RamRom_isim_beh.wdb 
+ISim M.53d (signature 0xb869381d)
+----------------------------------------------------------------------
+INFO:Security:51 - The XILINXD_LICENSE_FILE environment variable is not set.
+INFO:Security:52 - The LM_LICENSE_FILE environment variable is set to 'Y:\xylinx\Modeltech_xe_starter\win32xoem\license.dat'.
+INFO:Security:68 - Please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses")
+       to assist in obtaining a license.
+WARNING:Security:43 - No license file was found in the standard Xilinx license directory.
+WARNING:Security:44 - No license file was found.
+       Please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses")
+       to assist in obtaining a license.
+ERROR:Security:14 - No feature was available for 'ISIM'.
+
+No such feature exists.
+Feature:       ISIM
+License path:  C:/.Xilinx;d:\Xilinx\12.1\ISE_DS\ISE/data\*.lic;d:\Xilinx\12.1\ISE_DS\ISE/coregen/core_licenses\Xilinx.lic;d:\Xilinx\12.1\ISE_DS\ISE/coregen/core_licenses\XilinxFree.lic;D:\Xilinx\12.1\ISE_DS\EDK/data/core_licenses\Xilinx.lic;Y:\xylinx\Modeltech_xe_starter\win32xoem\license.dat;
+FLEXnet Licensing error:-5,357
+For further information, refer to the FLEXnet Licensing documentation,
+available at "www.acresso.com".
+----------------------------------------------------------------------
+WARNING: A full ISim License cannot be checked out due to the issues listed above. Please use Xilinx License Configuration Manager to fix these issues in order to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# help
+Usage: help [<command_name>]
+Type "help <command>" for help on commands.
+Valid commands are: bp, describe, divider, dump, group, help, init, isim, marker, ntrace, onerror, put, quit, restart, resume, run, saif, scope, sdfanno, show, specify, step, stop, test, vcd, virtualbus, wave, wcfg
+bp < list | <add <file_name> <line_number>> | <remove <file_name> <line_number>> | <del <index_list>> | clear >
+describe <object_name>
+divider add <name> [-into <id>] [-color <color>]
+dump [-p [<process_name>]]
+group add <name> [-into <id>]
+help [<command_name>]
+init
+isim <  < <ptrace|ltrace> <on|off> > | < set <userunit|arraydisplaylength|maxtraceablesize|radix> <value> > | < get <userunit|arraydisplaylength|maxtraceablesize|radix> > | < condition <list | <add <options>> | <remove <options>> > | < force < <add <options>> | <remove <options>> > >
+marker add <time>
+ntrace <  start | stop | < select [-o <on|off>] < <-m <path_name> [-l <all|this>]> | <-n <signal_name>> > >
+onerror {<script>}
+put <hdl_object_name> <value> [-radix <type>]
+quit [-f | -s]
+restart
+resume
+run [ all | continue | <<time> [<unit>]> ]
+saif < <open [-scope <path_name>] [-file <file_name>] [-level <nesting_level>] [-allnets] > |  close >
+scope [.. | <path_name>]
+sdfanno <-min|-typ|-max> <file_name> [-nowarn] [-noerror] [-root <path_name>]
+show < time | port | scope | signal | variable | constant | <child [-r]> | <<driver|load|value> <hdl_object_name>> >
+specify < <pathpulse <int> [<int>]> | <pulsestyle <onevent|ondetect>> | showcancelled | noshowcancelled >
+step
+stop
+test <hdl_object_name> <value> [-radix <type>]
+vcd < <dumpfile <file_name>> | dumpflush | dumpon | dumpoff | <dumpvars -m <path_name> [-l <level>]> | <dumplimit <size>> >
+virtualbus add <name> [-into <id>] [-reverse] [-radix <radix>] [-color <color>]
+wave <add [options] [<object_name>...]> | <log [options] [<object_name>...]>
+wcfg new | open <fileName> | save <fileName> | select <fileName>
+# isim force add /RamRom/PHI2 1 -radix bin -value 1 -radix bin -time 250 ns -repeat 500 ns
+# run all
+The simulator has terminated in an unexpected manner.  Please review the ISim log (isim.log) for details.
+# isim force add /RamRom/PHI2 1 -radix bin -value 0 -radix bin -time 250 ns -repeat 500 ns
+Command failed: # isim force add /RamRom/PHI2 1 -radix bin -value 0 -radix bin -time 250 ns -repeat 500 ns Simulator command interrupted.
+
+Simulation engine not responding
+# isim force add /RamRom/PHI2 1 -radix bin -value 0 -radix bin -time 250 ns -repeat 500 ns
+Command failed: # isim force add /RamRom/PHI2 1 -radix bin -value 0 -radix bin -time 250 ns -repeat 500 ns Simulator command interrupted.
+
+Simulation engine not responding

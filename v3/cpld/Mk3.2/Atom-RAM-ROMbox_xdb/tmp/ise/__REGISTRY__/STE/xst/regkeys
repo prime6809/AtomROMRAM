@@ -1,0 +1,6 @@
+CommandLine
+D:\Xilinx\10.1\ISE\bin\nt\unwrapped\xst.exe -ise F:/Phill/Electronics/Xilinx/Atom-RAM-ROMbox/Mk1.1/Atom-RAM-ROMbox.ise -intstyle ise -ifn F:/Phill/Electronics/Xilinx/Atom-RAM-ROMbox/Mk1.1/RamRom.xst -ofn F:/Phill/Electronics/Xilinx/Atom-RAM-ROMbox/Mk1.1/RamRom.syr -finalclean 1
+s
+FormatString
+xst [-ifn <InputFile>] [-ofn <OutputFile>] [-ise <iseProjectFile>] [--quiet] [-intstyle <Style>] [--deb <DebugLevel>] [--finalclean <Clean>] [--PcubeFlow] [--globOptFlow] [--XstNtrc]
+s

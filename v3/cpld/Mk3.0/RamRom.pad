@@ -1,0 +1,73 @@
+Release 8.1i - Fit P.20131013
+Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
+
+ 6-19-2018  6:51PM
+
+NOTE: This file is designed to be imported into a spreadsheet program
+such as Microsoft Excel for viewing, printing and sorting. The pipe '|'
+character is used as the data field separator.
+This file is also designed to support parsing.
+
+Input file:  RamRom.ngd
+output file: RamRom.pad
+Part type:   xc9536xl
+Speed grade: -5
+Package:     vq44
+
+Pinout by Pin Number:
+
+-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+Pin Number|Signal Name|Pin Usage|Pin Name|Direction|IO Standard|IO Bank Number|{blank}|Slew Rate|Termination|{blank}|Voltage|Constraint|
+P1|NRAMCS|O|I/O/GCK3|OUTPUT|||||||||
+P2|NROMCS|O|I/O|OUTPUT|||||||||
+P3|PHI2|I|I/O|INPUT|||||||||
+P4|GND||GND||||||||||
+P5|NRDS|O|I/O|OUTPUT|||||||||
+P6|DskROMSW|I|I/O|INPUT|||||||||
+P7|NBuffCtl|O|I/O|OUTPUT|||||||||
+P8|SpeedSW|I|I/O|INPUT|||||||||
+P9|TDI||TDI||||||||||
+P10|TMS||TMS||||||||||
+P11|TCK||TCK||||||||||
+P12|NWDS|O|I/O|OUTPUT|||||||||
+P13|RA<14>|O|I/O|OUTPUT|||||||||
+P14|RA<16>|O|I/O|OUTPUT|||||||||
+P15|VCC||VCCINT||||||||||
+P16|RA<15>|O|I/O|OUTPUT|||||||||
+P17|GND||GND||||||||||
+P18|RA<12>|O|I/O|OUTPUT|||||||||
+P19|Addr<11>|I|I/O|INPUT|||||||||
+P20|RA<13>|O|I/O|OUTPUT|||||||||
+P21|Addr<10>|I|I/O|INPUT|||||||||
+P22|Addr<12>|I|I/O|INPUT|||||||||
+P23|Addr<9>|I|I/O|INPUT|||||||||
+P24|TDO||TDO||||||||||
+P25|GND||GND||||||||||
+P26|VCC||VCCIO||||||||||
+P27|Addr<13>|I|I/O|INPUT|||||||||
+P28|Addr<8>|I|I/O|INPUT|||||||||
+P29|Addr<14>|I|I/O|INPUT|||||||||
+P30|Addr<7>|I|I/O|INPUT|||||||||
+P31|Addr<15>|I|I/O|INPUT|||||||||
+P32|Addr<6>|I|I/O|INPUT|||||||||
+P33|Addr<5>|I|I/O/GSR|INPUT|||||||||
+P34|Addr<4>|I|I/O/GTS2|INPUT|||||||||
+P35|VCC||VCCINT||||||||||
+P36|Addr<3>|I|I/O/GTS1|INPUT|||||||||
+P37|Addr<2>|I|I/O|INPUT|||||||||
+P38|Data<3>|I/O|I/O|BIDIR|||||||||
+P39|Addr<1>|I|I/O|INPUT|||||||||
+P40|Data<2>|I/O|I/O|BIDIR|||||||||
+P41|Addr<0>|I|I/O|INPUT|||||||||
+P42|Data<1>|I/O|I/O|BIDIR|||||||||
+P43|Data<0>|I/O|I/O/GCK1|BIDIR|||||||||
+P44|RW|I|I/O/GCK2|INPUT|||||||||
+
+To preserve the pinout above for future design iterations in
+Project Navigator simply execute the (Lock Pins) process
+located under the (Implement Design) process in a toolbox named
+(Optional Implementation Tools) or invoke PIN2UCF from the
+command line. The location constraints will be written into your
+specified UCF file
+
+

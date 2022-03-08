@@ -1,0 +1,409 @@
+MDF Database:  version 1.0
+MDF_INFO | RamRom | XC9536XL-5-VQ44
+MACROCELL | 0 | 6 | NRAMCS_OBUF
+ATTRIBUTES | 396034 | 0
+OUTPUTMC | 4 | 0 | 16 | 1 | 15 | 0 | 13 | 0 | 15
+INPUTS | 7 | Addr<15>  | Addr<12>  | Addr<14>  | Addr<13>  | $OpTx$FX_DC$36  | SwitchLatch<0>  | RomLatch_2.EXP
+INPUTMC | 3 | 1 | 10 | 0 | 4 | 0 | 7
+INPUTP | 4 | 45 | 35 | 43 | 41
+IMPORTS | 1 | 0 | 7
+EQ | 10 | 
+   NRAMCS = Addr<15> & !Addr<13>
+	# Addr<15> & Addr<12>
+	# Addr<15> & Addr<14>
+	# Addr<15> & !$OpTx$FX_DC$36
+	# Addr<13> & Addr<12> & Addr<14> & SwitchLatch<0>
+;Imported pterms FB1_8
+	# Addr<9> & !Addr<8> & !Addr<13> & !Addr<12> & 
+	Addr<11> & !Addr<10> & !Addr<14> & DskROMSW & SwitchLatch<1>
+	# Addr<9> & !Addr<8> & !Addr<13> & !Addr<12> & 
+	Addr<11> & !Addr<10> & !Addr<14> & !DskROMSW & !SwitchLatch<1>;
+
+MACROCELL | 0 | 2 | DataOut<0>
+ATTRIBUTES | 265986 | 0
+INPUTS | 22 | SwitchLatch<0>  | $OpTx$FX_DC$23  | RW  | PHI2  | Addr<6>  | Addr<5>  | Addr<4>  | Addr<3>  | Addr<2>  | Addr<0>  | Addr<9>  | Addr<8>  | Addr<7>  | Addr<15>  | Addr<13>  | Addr<12>  | Addr<11>  | Addr<10>  | Addr<1>  | Addr<14>  | RomLatch_0  | $OpTx$FX_SC$24
+INPUTMC | 4 | 0 | 4 | 1 | 11 | 0 | 17 | 1 | 17
+INPUTP | 18 | 11 | 14 | 46 | 47 | 1 | 3 | 4 | 8 | 37 | 42 | 44 | 45 | 41 | 35 | 32 | 34 | 6 | 43
+EQ | 9 | 
+   Data<0> = SwitchLatch<0> & !$OpTx$FX_DC$23
+	# RW & PHI2 & Addr<6> & Addr<5> & Addr<4> & 
+	Addr<3> & Addr<2> & Addr<0> & Addr<9> & Addr<8> & 
+	Addr<7> & Addr<15> & Addr<13> & Addr<12> & Addr<11> & 
+	Addr<10> & Addr<1> & !Addr<14> & RomLatch_0;
+   Data<0>.OE = RW & PHI2 & Addr<6> & Addr<5> & Addr<4> & 
+	Addr<3> & Addr<2> & Addr<9> & Addr<8> & Addr<7> & 
+	Addr<15> & Addr<13> & Addr<12> & Addr<11> & Addr<10> & 
+	!$OpTx$FX_SC$24;
+
+MACROCELL | 0 | 3 | DataOut<1>
+ATTRIBUTES | 265986 | 0
+INPUTS | 22 | SwitchLatch<1>  | $OpTx$FX_DC$23  | RW  | PHI2  | Addr<6>  | Addr<5>  | Addr<4>  | Addr<3>  | Addr<2>  | Addr<0>  | Addr<9>  | Addr<8>  | Addr<7>  | Addr<15>  | Addr<13>  | Addr<12>  | Addr<11>  | Addr<10>  | Addr<1>  | Addr<14>  | RomLatch_1  | $OpTx$FX_SC$24
+INPUTMC | 4 | 0 | 1 | 1 | 11 | 0 | 11 | 1 | 17
+INPUTP | 18 | 11 | 14 | 46 | 47 | 1 | 3 | 4 | 8 | 37 | 42 | 44 | 45 | 41 | 35 | 32 | 34 | 6 | 43
+EQ | 9 | 
+   Data<1> = SwitchLatch<1> & !$OpTx$FX_DC$23
+	# RW & PHI2 & Addr<6> & Addr<5> & Addr<4> & 
+	Addr<3> & Addr<2> & Addr<0> & Addr<9> & Addr<8> & 
+	Addr<7> & Addr<15> & Addr<13> & Addr<12> & Addr<11> & 
+	Addr<10> & Addr<1> & !Addr<14> & RomLatch_1;
+   Data<1>.OE = RW & PHI2 & Addr<6> & Addr<5> & Addr<4> & 
+	Addr<3> & Addr<2> & Addr<9> & Addr<8> & Addr<7> & 
+	Addr<15> & Addr<13> & Addr<12> & Addr<11> & Addr<10> & 
+	!$OpTx$FX_SC$24;
+
+MACROCELL | 0 | 0 | DataOut<2>
+ATTRIBUTES | 265986 | 0
+INPUTS | 23 | SwitchLatch<2>  | $OpTx$FX_DC$22  | RW  | PHI2  | Addr<6>  | Addr<5>  | Addr<4>  | Addr<3>  | Addr<2>  | Addr<0>  | Addr<9>  | Addr<8>  | Addr<7>  | Addr<15>  | Addr<13>  | Addr<12>  | Addr<11>  | Addr<10>  | Addr<1>  | Addr<14>  | RomLatch_2  | DskROMSW  | $OpTx$FX_SC$24
+INPUTMC | 4 | 1 | 14 | 1 | 12 | 0 | 7 | 1 | 17
+INPUTP | 19 | 11 | 14 | 46 | 47 | 1 | 3 | 4 | 8 | 37 | 42 | 44 | 45 | 41 | 35 | 32 | 34 | 6 | 43 | 17
+EQ | 13 | 
+   Data<2> = SwitchLatch<2> & !$OpTx$FX_DC$22
+	# RW & PHI2 & Addr<6> & Addr<5> & Addr<4> & 
+	Addr<3> & Addr<2> & Addr<0> & Addr<9> & Addr<8> & 
+	Addr<7> & Addr<15> & Addr<13> & Addr<12> & Addr<11> & 
+	Addr<10> & Addr<1> & !Addr<14> & RomLatch_2
+	# RW & PHI2 & Addr<6> & Addr<5> & Addr<4> & 
+	Addr<3> & Addr<2> & Addr<0> & Addr<9> & Addr<8> & 
+	Addr<7> & Addr<15> & Addr<13> & Addr<12> & Addr<11> & 
+	Addr<10> & !Addr<1> & !Addr<14> & !DskROMSW;
+   Data<2>.OE = RW & PHI2 & Addr<6> & Addr<5> & Addr<4> & 
+	Addr<3> & Addr<2> & Addr<9> & Addr<8> & Addr<7> & 
+	Addr<15> & Addr<13> & Addr<12> & Addr<11> & Addr<10> & 
+	!$OpTx$FX_SC$24;
+
+MACROCELL | 1 | 1 | DataOut<3>
+ATTRIBUTES | 265986 | 0
+INPUTS | 23 | SwitchLatch<3>  | $OpTx$FX_DC$22  | RW  | PHI2  | Addr<6>  | Addr<5>  | Addr<4>  | Addr<3>  | Addr<2>  | Addr<0>  | Addr<9>  | Addr<8>  | Addr<7>  | Addr<15>  | Addr<13>  | Addr<12>  | Addr<11>  | Addr<10>  | Addr<1>  | Addr<14>  | RomLatch_3  | SpeedSW  | $OpTx$FX_SC$24
+INPUTMC | 4 | 1 | 13 | 1 | 12 | 1 | 16 | 1 | 17
+INPUTP | 19 | 11 | 14 | 46 | 47 | 1 | 3 | 4 | 8 | 37 | 42 | 44 | 45 | 41 | 35 | 32 | 34 | 6 | 43 | 19
+EQ | 13 | 
+   Data<3> = SwitchLatch<3> & !$OpTx$FX_DC$22
+	# RW & PHI2 & Addr<6> & Addr<5> & Addr<4> & 
+	Addr<3> & Addr<2> & Addr<0> & Addr<9> & Addr<8> & 
+	Addr<7> & Addr<15> & Addr<13> & Addr<12> & Addr<11> & 
+	Addr<10> & Addr<1> & !Addr<14> & RomLatch_3
+	# RW & PHI2 & Addr<6> & Addr<5> & Addr<4> & 
+	Addr<3> & Addr<2> & Addr<0> & Addr<9> & Addr<8> & 
+	Addr<7> & Addr<15> & Addr<13> & Addr<12> & Addr<11> & 
+	Addr<10> & !Addr<1> & !Addr<14> & SpeedSW;
+   Data<3>.OE = RW & PHI2 & Addr<6> & Addr<5> & Addr<4> & 
+	Addr<3> & Addr<2> & Addr<9> & Addr<8> & Addr<7> & 
+	Addr<15> & Addr<13> & Addr<12> & Addr<11> & Addr<10> & 
+	!$OpTx$FX_SC$24;
+
+MACROCELL | 0 | 5 | NROMCS_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 7 | Addr<15>  | Addr<12>  | Addr<14>  | Addr<13>  | DskROMSW  | SwitchLatch<2>  | $OpTx$FX_DC$36
+INPUTMC | 2 | 1 | 14 | 1 | 10
+INPUTP | 5 | 45 | 35 | 43 | 41 | 17
+EQ | 6 | 
+   !NROMCS = Addr<15> & !Addr<13> & Addr<14>
+	# Addr<15> & Addr<12> & Addr<14>
+	# Addr<15> & Addr<14> & DskROMSW & SwitchLatch<2>
+	# Addr<15> & Addr<14> & !DskROMSW & !SwitchLatch<2>
+	# Addr<15> & Addr<13> & !Addr<12> & !Addr<14> & 
+	!$OpTx$FX_DC$36;
+
+MACROCELL | 0 | 14 | RA_16_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 2 | Addr<15>  | Addr<14>
+INPUTP | 2 | 45 | 43
+EQ | 1 | 
+   RA<16> = Addr<15> & Addr<14>;
+
+MACROCELL | 0 | 17 | RomLatch_0
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 3 | 0 | 2 | 0 | 16 | 1 | 10
+INPUTS | 19 | Data<0>.PIN  | RW  | PHI2  | Addr<6>  | Addr<5>  | Addr<4>  | Addr<3>  | Addr<2>  | Addr<0>  | Addr<9>  | Addr<8>  | Addr<7>  | Addr<15>  | Addr<13>  | Addr<12>  | Addr<11>  | Addr<10>  | Addr<1>  | Addr<14>
+INPUTP | 19 | 10 | 11 | 14 | 46 | 47 | 1 | 3 | 4 | 8 | 37 | 42 | 44 | 45 | 41 | 35 | 32 | 34 | 6 | 43
+EQ | 5 | 
+   RomLatch_0.D = Data<0>.PIN;
+   !RomLatch_0.CLK = !RW & PHI2 & Addr<6> & Addr<5> & Addr<4> & 
+	Addr<3> & Addr<2> & Addr<0> & Addr<9> & Addr<8> & 
+	Addr<7> & Addr<15> & Addr<13> & Addr<12> & Addr<11> & 
+	Addr<10> & Addr<1> & !Addr<14>;
+
+MACROCELL | 0 | 11 | RomLatch_1
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 4 | 0 | 3 | 1 | 15 | 1 | 10 | 0 | 10
+INPUTS | 19 | Data<1>.PIN  | RW  | PHI2  | Addr<6>  | Addr<5>  | Addr<4>  | Addr<3>  | Addr<2>  | Addr<0>  | Addr<9>  | Addr<8>  | Addr<7>  | Addr<15>  | Addr<13>  | Addr<12>  | Addr<11>  | Addr<10>  | Addr<1>  | Addr<14>
+INPUTP | 19 | 9 | 11 | 14 | 46 | 47 | 1 | 3 | 4 | 8 | 37 | 42 | 44 | 45 | 41 | 35 | 32 | 34 | 6 | 43
+EXPORTS | 1 | 0 | 10
+EQ | 8 | 
+   RomLatch_1.D = Data<1>.PIN;
+   !RomLatch_1.CLK = !RW & PHI2 & Addr<6> & Addr<5> & Addr<4> & 
+	Addr<3> & Addr<2> & Addr<0> & Addr<9> & Addr<8> & 
+	Addr<7> & Addr<15> & Addr<13> & Addr<12> & Addr<11> & 
+	Addr<10> & Addr<1> & !Addr<14>;
+    RomLatch_1.EXP  =  !Addr<13> & Addr<10>
+	# Addr<12> & !Addr<10>
+	# Addr<15> & !Addr<12> & !Addr<14>
+
+MACROCELL | 0 | 7 | RomLatch_2
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 4 | 0 | 0 | 0 | 13 | 1 | 10 | 0 | 6
+INPUTS | 21 | Data<2>.PIN  | RW  | PHI2  | Addr<6>  | Addr<5>  | Addr<4>  | Addr<3>  | Addr<2>  | Addr<0>  | Addr<9>  | Addr<8>  | Addr<7>  | Addr<15>  | Addr<13>  | Addr<12>  | Addr<11>  | Addr<10>  | Addr<1>  | Addr<14>  | DskROMSW  | SwitchLatch<1>
+INPUTMC | 1 | 0 | 1
+INPUTP | 20 | 7 | 11 | 14 | 46 | 47 | 1 | 3 | 4 | 8 | 37 | 42 | 44 | 45 | 41 | 35 | 32 | 34 | 6 | 43 | 17
+EXPORTS | 1 | 0 | 6
+EQ | 9 | 
+   RomLatch_2.D = Data<2>.PIN;
+   !RomLatch_2.CLK = !RW & PHI2 & Addr<6> & Addr<5> & Addr<4> & 
+	Addr<3> & Addr<2> & Addr<0> & Addr<9> & Addr<8> & 
+	Addr<7> & Addr<15> & Addr<13> & Addr<12> & Addr<11> & 
+	Addr<10> & Addr<1> & !Addr<14>;
+    RomLatch_2.EXP  =  Addr<9> & !Addr<8> & !Addr<13> & !Addr<12> & 
+	Addr<11> & !Addr<10> & !Addr<14> & DskROMSW & SwitchLatch<1>
+	# Addr<9> & !Addr<8> & !Addr<13> & !Addr<12> & 
+	Addr<11> & !Addr<10> & !Addr<14> & !DskROMSW & !SwitchLatch<1>
+
+MACROCELL | 1 | 16 | RomLatch_3
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 3 | 1 | 1 | 0 | 15 | 1 | 10
+INPUTS | 19 | Data<3>.PIN  | RW  | PHI2  | Addr<6>  | Addr<5>  | Addr<4>  | Addr<3>  | Addr<2>  | Addr<0>  | Addr<9>  | Addr<8>  | Addr<7>  | Addr<15>  | Addr<13>  | Addr<12>  | Addr<11>  | Addr<10>  | Addr<1>  | Addr<14>
+INPUTP | 19 | 5 | 11 | 14 | 46 | 47 | 1 | 3 | 4 | 8 | 37 | 42 | 44 | 45 | 41 | 35 | 32 | 34 | 6 | 43
+EQ | 5 | 
+   RomLatch_3.D = Data<3>.PIN;
+   !RomLatch_3.CLK = !RW & PHI2 & Addr<6> & Addr<5> & Addr<4> & 
+	Addr<3> & Addr<2> & Addr<0> & Addr<9> & Addr<8> & 
+	Addr<7> & Addr<15> & Addr<13> & Addr<12> & Addr<11> & 
+	Addr<10> & Addr<1> & !Addr<14>;
+
+MACROCELL | 0 | 4 | SwitchLatch<0>
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 3 | 0 | 6 | 0 | 2 | 1 | 10
+INPUTS | 19 | Data<0>.PIN  | RW  | PHI2  | Addr<6>  | Addr<5>  | Addr<4>  | Addr<3>  | Addr<2>  | Addr<0>  | Addr<9>  | Addr<8>  | Addr<7>  | Addr<15>  | Addr<13>  | Addr<12>  | Addr<11>  | Addr<10>  | Addr<1>  | Addr<14>
+INPUTP | 19 | 10 | 11 | 14 | 46 | 47 | 1 | 3 | 4 | 8 | 37 | 42 | 44 | 45 | 41 | 35 | 32 | 34 | 6 | 43
+EQ | 5 | 
+   SwitchLatch<0>.D = Data<0>.PIN;
+   !SwitchLatch<0>.CLK = !RW & PHI2 & Addr<6> & Addr<5> & Addr<4> & 
+	Addr<3> & Addr<2> & !Addr<0> & Addr<9> & Addr<8> & 
+	Addr<7> & Addr<15> & Addr<13> & Addr<12> & Addr<11> & 
+	Addr<10> & Addr<1> & !Addr<14>;
+
+MACROCELL | 0 | 1 | SwitchLatch<1>
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 3 | 0 | 10 | 0 | 3 | 0 | 7
+INPUTS | 19 | Data<1>.PIN  | RW  | PHI2  | Addr<6>  | Addr<5>  | Addr<4>  | Addr<3>  | Addr<2>  | Addr<0>  | Addr<9>  | Addr<8>  | Addr<7>  | Addr<15>  | Addr<13>  | Addr<12>  | Addr<11>  | Addr<10>  | Addr<1>  | Addr<14>
+INPUTP | 19 | 9 | 11 | 14 | 46 | 47 | 1 | 3 | 4 | 8 | 37 | 42 | 44 | 45 | 41 | 35 | 32 | 34 | 6 | 43
+EQ | 5 | 
+   SwitchLatch<1>.D = Data<1>.PIN;
+   !SwitchLatch<1>.CLK = !RW & PHI2 & Addr<6> & Addr<5> & Addr<4> & 
+	Addr<3> & Addr<2> & !Addr<0> & Addr<9> & Addr<8> & 
+	Addr<7> & Addr<15> & Addr<13> & Addr<12> & Addr<11> & 
+	Addr<10> & Addr<1> & !Addr<14>;
+
+MACROCELL | 1 | 14 | SwitchLatch<2>
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 4 | 0 | 0 | 0 | 5 | 0 | 13 | 0 | 9
+INPUTS | 19 | Data<2>.PIN  | RW  | PHI2  | Addr<6>  | Addr<5>  | Addr<4>  | Addr<3>  | Addr<2>  | Addr<0>  | Addr<9>  | Addr<8>  | Addr<7>  | Addr<15>  | Addr<13>  | Addr<12>  | Addr<11>  | Addr<10>  | Addr<1>  | Addr<14>
+INPUTP | 19 | 7 | 11 | 14 | 46 | 47 | 1 | 3 | 4 | 8 | 37 | 42 | 44 | 45 | 41 | 35 | 32 | 34 | 6 | 43
+EQ | 5 | 
+   SwitchLatch<2>.D = Data<2>.PIN;
+   !SwitchLatch<2>.CLK = !RW & PHI2 & Addr<6> & Addr<5> & Addr<4> & 
+	Addr<3> & Addr<2> & !Addr<0> & Addr<9> & Addr<8> & 
+	Addr<7> & Addr<15> & Addr<13> & Addr<12> & Addr<11> & 
+	Addr<10> & Addr<1> & !Addr<14>;
+
+MACROCELL | 1 | 13 | SwitchLatch<3>
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 1 | 1 | 1
+INPUTS | 19 | Data<3>.PIN  | RW  | PHI2  | Addr<6>  | Addr<5>  | Addr<4>  | Addr<3>  | Addr<2>  | Addr<0>  | Addr<9>  | Addr<8>  | Addr<7>  | Addr<15>  | Addr<13>  | Addr<12>  | Addr<11>  | Addr<10>  | Addr<1>  | Addr<14>
+INPUTP | 19 | 5 | 11 | 14 | 46 | 47 | 1 | 3 | 4 | 8 | 37 | 42 | 44 | 45 | 41 | 35 | 32 | 34 | 6 | 43
+EQ | 5 | 
+   SwitchLatch<3>.D = Data<3>.PIN;
+   !SwitchLatch<3>.CLK = !RW & PHI2 & Addr<6> & Addr<5> & Addr<4> & 
+	Addr<3> & Addr<2> & !Addr<0> & Addr<9> & Addr<8> & 
+	Addr<7> & Addr<15> & Addr<13> & Addr<12> & Addr<11> & 
+	Addr<10> & Addr<1> & !Addr<14>;
+
+MACROCELL | 0 | 8 | NRDS_OBUF
+ATTRIBUTES | 264962 | 0
+OUTPUTMC | 1 | 0 | 9
+INPUTS | 12 | RW  | PHI2  | Addr<15>  | Addr<13>  | Addr<14>  | Addr<6>  | Addr<5>  | Addr<4>  | Addr<9>  | Addr<8>  | Addr<7>  | $OpTx$FX_SC$24
+INPUTMC | 1 | 1 | 17
+INPUTP | 11 | 11 | 14 | 45 | 41 | 43 | 46 | 47 | 1 | 37 | 42 | 44
+EXPORTS | 1 | 0 | 9
+EQ | 5 | 
+   !NRDS = RW & PHI2;
+    NRDS_OBUF.EXP  =  !Addr<15> & Addr<13>
+	# !Addr<13> & Addr<14>
+	# Addr<6> & Addr<5> & Addr<4> & Addr<9> & 
+	Addr<8> & Addr<7> & !$OpTx$FX_SC$24
+
+MACROCELL | 0 | 12 | NWDS_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 2 | RW  | PHI2
+INPUTP | 2 | 11 | 14
+EQ | 1 | 
+   !NWDS = !RW & PHI2;
+
+MACROCELL | 0 | 16 | RA_12_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | Addr<15>  | Addr<12>  | NRAMCS  | Addr<14>  | RomLatch_0
+INPUTMC | 2 | 0 | 6 | 0 | 17
+INPUTP | 3 | 45 | 35 | 43
+EQ | 4 | 
+   !RA<12> = !Addr<15> & !Addr<12> & !NRAMCS
+	# !Addr<15> & NRAMCS & !RomLatch_0
+	# !Addr<14> & NRAMCS & !RomLatch_0
+	# Addr<15> & !Addr<12> & Addr<14> & NRAMCS;
+
+MACROCELL | 1 | 15 | RA_13_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | Addr<15>  | Addr<13>  | NRAMCS  | Addr<14>  | RomLatch_1
+INPUTMC | 2 | 0 | 6 | 0 | 11
+INPUTP | 3 | 45 | 41 | 43
+EQ | 4 | 
+   !RA<13> = !Addr<15> & !Addr<13> & !NRAMCS
+	# !Addr<15> & NRAMCS & !RomLatch_1
+	# !Addr<14> & NRAMCS & !RomLatch_1
+	# Addr<15> & !Addr<13> & Addr<14> & NRAMCS;
+
+MACROCELL | 0 | 13 | RA_14_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 6 | Addr<15>  | Addr<14>  | NRAMCS  | RomLatch_2  | DskROMSW  | SwitchLatch<2>
+INPUTMC | 3 | 0 | 6 | 0 | 7 | 1 | 14
+INPUTP | 3 | 45 | 43 | 17
+EQ | 7 | 
+   !RA<14> = !Addr<15> & !Addr<14> & !NRAMCS
+	# !Addr<15> & NRAMCS & !RomLatch_2
+	# !Addr<14> & NRAMCS & !RomLatch_2
+	# Addr<15> & Addr<14> & NRAMCS & DskROMSW & 
+	SwitchLatch<2>
+	# Addr<15> & Addr<14> & NRAMCS & !DskROMSW & 
+	!SwitchLatch<2>;
+
+MACROCELL | 0 | 15 | RA_15_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 4 | Addr<14>  | NRAMCS  | RomLatch_3  | Addr<15>
+INPUTMC | 2 | 0 | 6 | 1 | 16
+INPUTP | 2 | 43 | 45
+EQ | 2 | 
+   RA<15> = !Addr<15> & NRAMCS & RomLatch_3
+	# !Addr<14> & NRAMCS & RomLatch_3;
+
+MACROCELL | 0 | 10 | NBuffCtl_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 14 | Addr<6>  | Addr<5>  | Addr<4>  | Addr<3>  | Addr<9>  | Addr<8>  | Addr<7>  | Addr<14>  | Addr<2>  | Addr<13>  | DskROMSW  | SwitchLatch<1>  | EXP4_.EXP  | RomLatch_1.EXP
+INPUTMC | 3 | 0 | 1 | 0 | 9 | 0 | 11
+INPUTP | 11 | 46 | 47 | 1 | 3 | 37 | 42 | 44 | 43 | 4 | 41 | 17
+IMPORTS | 2 | 0 | 9 | 0 | 11
+EQ | 22 | 
+   NBuffCtl = Addr<8> & !Addr<13>
+	# !Addr<13> & DskROMSW & SwitchLatch<1>
+	# !Addr<13> & !DskROMSW & !SwitchLatch<1>
+	# Addr<6> & Addr<5> & Addr<4> & Addr<3> & 
+	Addr<9> & Addr<8> & Addr<7> & !Addr<14>
+	# Addr<6> & Addr<5> & Addr<4> & Addr<2> & 
+	Addr<9> & Addr<8> & Addr<7> & !Addr<14>
+;Imported pterms FB1_10
+	# !Addr<9> & !Addr<13>
+	# Addr<12> & Addr<14>
+	# !Addr<11> & !Addr<14>
+	# Addr<14> & DskROMSW & SwitchLatch<2>
+	# Addr<14> & !DskROMSW & !SwitchLatch<2>
+;Imported pterms FB1_9
+	# !Addr<15> & Addr<13>
+	# !Addr<13> & Addr<14>
+	# Addr<6> & Addr<5> & Addr<4> & Addr<9> & 
+	Addr<8> & Addr<7> & !$OpTx$FX_SC$24
+;Imported pterms FB1_12
+	# !Addr<13> & Addr<10>
+	# Addr<12> & !Addr<10>
+	# Addr<15> & !Addr<12> & !Addr<14>;
+
+MACROCELL | 1 | 10 | $OpTx$FX_DC$36
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 2 | 0 | 6 | 0 | 5
+INPUTS | 5 | RomLatch_0  | RomLatch_1  | RomLatch_2  | RomLatch_3  | SwitchLatch<0>
+INPUTMC | 5 | 0 | 17 | 0 | 11 | 0 | 7 | 1 | 16 | 0 | 4
+EQ | 2 | 
+   $OpTx$FX_DC$36 = !RomLatch_0 & !RomLatch_1 & !RomLatch_2 & 
+	!RomLatch_3 & SwitchLatch<0>;
+
+MACROCELL | 1 | 17 | $OpTx$FX_SC$24
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 5 | 0 | 2 | 0 | 3 | 0 | 0 | 1 | 1 | 0 | 8
+INPUTS | 4 | Addr<15>  | Addr<14>  | Addr<0>  | Addr<1>
+INPUTP | 4 | 45 | 43 | 8 | 6
+EQ | 2 | 
+   $OpTx$FX_SC$24 = !Addr<0> & !Addr<1>
+	# Addr<15> & Addr<14>;
+
+MACROCELL | 1 | 11 | $OpTx$FX_DC$23
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 2 | 0 | 2 | 0 | 3
+INPUTS | 17 | RW  | PHI2  | Addr<6>  | Addr<5>  | Addr<4>  | Addr<3>  | Addr<2>  | Addr<0>  | Addr<9>  | Addr<8>  | Addr<7>  | Addr<15>  | Addr<13>  | Addr<12>  | Addr<11>  | Addr<10>  | Addr<14>
+INPUTP | 17 | 11 | 14 | 46 | 47 | 1 | 3 | 4 | 8 | 37 | 42 | 44 | 45 | 41 | 35 | 32 | 34 | 43
+EQ | 4 | 
+   $OpTx$FX_DC$23 = RW & PHI2 & Addr<6> & Addr<5> & Addr<4> & 
+	Addr<3> & Addr<2> & Addr<0> & Addr<9> & Addr<8> & 
+	Addr<7> & Addr<15> & Addr<13> & Addr<12> & Addr<11> & 
+	Addr<10> & !Addr<14>;
+
+MACROCELL | 1 | 12 | $OpTx$FX_DC$22
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 2 | 0 | 0 | 1 | 1
+INPUTS | 17 | RW  | PHI2  | Addr<6>  | Addr<5>  | Addr<4>  | Addr<3>  | Addr<2>  | Addr<0>  | Addr<9>  | Addr<8>  | Addr<7>  | Addr<15>  | Addr<13>  | Addr<12>  | Addr<11>  | Addr<10>  | Addr<14>
+INPUTP | 17 | 11 | 14 | 46 | 47 | 1 | 3 | 4 | 8 | 37 | 42 | 44 | 45 | 41 | 35 | 32 | 34 | 43
+EQ | 4 | 
+   $OpTx$FX_DC$22 = RW & PHI2 & Addr<6> & Addr<5> & Addr<4> & 
+	Addr<3> & Addr<2> & Addr<0> & Addr<9> & Addr<8> & 
+	Addr<7> & Addr<15> & Addr<13> & Addr<12> & Addr<11> & 
+	Addr<10> & !Addr<14>;
+
+MACROCELL | 0 | 9 | EXP4_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 10
+INPUTS | 8 | Addr<9>  | Addr<13>  | Addr<12>  | Addr<14>  | Addr<11>  | DskROMSW  | SwitchLatch<2>  | NRDS_OBUF.EXP
+INPUTMC | 2 | 1 | 14 | 0 | 8
+INPUTP | 6 | 37 | 41 | 35 | 43 | 32 | 17
+EXPORTS | 1 | 0 | 10
+IMPORTS | 1 | 0 | 8
+EQ | 10 | 
+       EXP4_.EXP  =  !Addr<9> & !Addr<13>
+	# Addr<12> & Addr<14>
+	# !Addr<11> & !Addr<14>
+	# Addr<14> & DskROMSW & SwitchLatch<2>
+	# Addr<14> & !DskROMSW & !SwitchLatch<2>
+;Imported pterms FB1_9
+	# !Addr<15> & Addr<13>
+	# !Addr<13> & Addr<14>
+	# Addr<6> & Addr<5> & Addr<4> & Addr<9> & 
+	Addr<8> & Addr<7> & !$OpTx$FX_SC$24
+
+PIN | RW | 64 | 0 | N/A | 11 | 16 | 0 | 2 | 0 | 3 | 0 | 0 | 1 | 1 | 0 | 17 | 0 | 11 | 0 | 7 | 1 | 16 | 0 | 4 | 0 | 1 | 1 | 14 | 1 | 13 | 0 | 8 | 0 | 12 | 1 | 11 | 1 | 12
+PIN | PHI2 | 64 | 0 | N/A | 14 | 16 | 0 | 2 | 0 | 3 | 0 | 0 | 1 | 1 | 0 | 17 | 0 | 11 | 0 | 7 | 1 | 16 | 0 | 4 | 0 | 1 | 1 | 14 | 1 | 13 | 0 | 8 | 0 | 12 | 1 | 11 | 1 | 12
+PIN | Addr<6> | 64 | 0 | N/A | 46 | 16 | 0 | 2 | 0 | 3 | 0 | 0 | 1 | 1 | 0 | 17 | 0 | 11 | 0 | 7 | 1 | 16 | 0 | 4 | 0 | 1 | 1 | 14 | 1 | 13 | 0 | 10 | 1 | 11 | 1 | 12 | 0 | 8
+PIN | Addr<5> | 64 | 0 | N/A | 47 | 16 | 0 | 2 | 0 | 3 | 0 | 0 | 1 | 1 | 0 | 17 | 0 | 11 | 0 | 7 | 1 | 16 | 0 | 4 | 0 | 1 | 1 | 14 | 1 | 13 | 0 | 10 | 1 | 11 | 1 | 12 | 0 | 8
+PIN | Addr<4> | 64 | 0 | N/A | 1 | 16 | 0 | 2 | 0 | 3 | 0 | 0 | 1 | 1 | 0 | 17 | 0 | 11 | 0 | 7 | 1 | 16 | 0 | 4 | 0 | 1 | 1 | 14 | 1 | 13 | 0 | 10 | 1 | 11 | 1 | 12 | 0 | 8
+PIN | Addr<3> | 64 | 0 | N/A | 3 | 15 | 0 | 2 | 0 | 3 | 0 | 0 | 1 | 1 | 0 | 17 | 0 | 11 | 0 | 7 | 1 | 16 | 0 | 4 | 0 | 1 | 1 | 14 | 1 | 13 | 0 | 10 | 1 | 11 | 1 | 12
+PIN | Addr<2> | 64 | 0 | N/A | 4 | 15 | 0 | 2 | 0 | 3 | 0 | 0 | 1 | 1 | 0 | 17 | 0 | 11 | 0 | 7 | 1 | 16 | 0 | 4 | 0 | 1 | 1 | 14 | 1 | 13 | 0 | 10 | 1 | 11 | 1 | 12
+PIN | Addr<0> | 64 | 0 | N/A | 8 | 15 | 0 | 2 | 0 | 3 | 0 | 0 | 1 | 1 | 0 | 17 | 0 | 11 | 0 | 7 | 1 | 16 | 0 | 4 | 0 | 1 | 1 | 14 | 1 | 13 | 1 | 17 | 1 | 11 | 1 | 12
+PIN | Addr<9> | 64 | 0 | N/A | 37 | 17 | 1 | 12 | 0 | 2 | 0 | 3 | 0 | 0 | 1 | 1 | 0 | 17 | 0 | 11 | 0 | 7 | 1 | 16 | 0 | 4 | 0 | 1 | 1 | 14 | 1 | 13 | 0 | 10 | 1 | 11 | 0 | 8 | 0 | 9
+PIN | Addr<8> | 64 | 0 | N/A | 42 | 16 | 1 | 12 | 0 | 2 | 0 | 3 | 0 | 0 | 1 | 1 | 0 | 17 | 0 | 11 | 0 | 7 | 1 | 16 | 0 | 4 | 0 | 1 | 1 | 14 | 1 | 13 | 0 | 10 | 1 | 11 | 0 | 8
+PIN | Addr<7> | 64 | 0 | N/A | 44 | 16 | 0 | 2 | 0 | 3 | 0 | 0 | 1 | 1 | 0 | 17 | 0 | 11 | 0 | 7 | 1 | 16 | 0 | 4 | 0 | 1 | 1 | 14 | 1 | 13 | 0 | 10 | 1 | 11 | 1 | 12 | 0 | 8
+PIN | Addr<15> | 64 | 0 | N/A | 45 | 23 | 0 | 6 | 0 | 2 | 0 | 3 | 0 | 0 | 1 | 1 | 0 | 5 | 0 | 14 | 0 | 17 | 0 | 11 | 0 | 7 | 1 | 16 | 0 | 4 | 0 | 1 | 1 | 14 | 1 | 13 | 0 | 16 | 1 | 15 | 0 | 13 | 0 | 15 | 0 | 8 | 1 | 17 | 1 | 11 | 1 | 12
+PIN | Addr<13> | 64 | 0 | N/A | 41 | 20 | 0 | 6 | 0 | 2 | 0 | 3 | 0 | 0 | 1 | 1 | 0 | 5 | 0 | 17 | 0 | 11 | 0 | 7 | 1 | 16 | 0 | 4 | 0 | 1 | 1 | 14 | 1 | 13 | 1 | 15 | 0 | 10 | 1 | 11 | 1 | 12 | 0 | 8 | 0 | 9
+PIN | Addr<12> | 64 | 0 | N/A | 35 | 18 | 0 | 6 | 0 | 2 | 0 | 3 | 0 | 0 | 1 | 1 | 0 | 5 | 0 | 17 | 0 | 11 | 0 | 7 | 1 | 16 | 0 | 4 | 0 | 1 | 1 | 14 | 1 | 13 | 0 | 16 | 0 | 9 | 1 | 11 | 1 | 12
+PIN | Addr<11> | 64 | 0 | N/A | 32 | 15 | 1 | 12 | 0 | 2 | 0 | 3 | 0 | 0 | 1 | 1 | 0 | 17 | 0 | 11 | 0 | 7 | 1 | 16 | 0 | 4 | 0 | 1 | 1 | 14 | 1 | 13 | 0 | 9 | 1 | 11
+PIN | Addr<10> | 64 | 0 | N/A | 34 | 14 | 1 | 12 | 0 | 2 | 0 | 3 | 0 | 0 | 1 | 1 | 0 | 17 | 0 | 11 | 0 | 7 | 1 | 16 | 0 | 4 | 0 | 1 | 1 | 14 | 1 | 13 | 1 | 11
+PIN | Addr<1> | 64 | 0 | N/A | 6 | 13 | 0 | 2 | 0 | 3 | 0 | 0 | 1 | 1 | 0 | 17 | 0 | 11 | 0 | 7 | 1 | 16 | 0 | 4 | 0 | 1 | 1 | 14 | 1 | 13 | 1 | 17
+PIN | Addr<14> | 64 | 0 | N/A | 43 | 25 | 0 | 6 | 0 | 2 | 0 | 3 | 0 | 0 | 1 | 1 | 0 | 5 | 0 | 14 | 0 | 17 | 0 | 11 | 0 | 7 | 1 | 16 | 0 | 4 | 0 | 1 | 1 | 14 | 1 | 13 | 0 | 16 | 1 | 15 | 0 | 13 | 0 | 15 | 0 | 10 | 1 | 17 | 1 | 11 | 1 | 12 | 0 | 8 | 0 | 9
+PIN | DskROMSW | 64 | 0 | N/A | 17 | 6 | 0 | 10 | 0 | 0 | 0 | 5 | 0 | 13 | 0 | 7 | 0 | 9
+PIN | SpeedSW | 64 | 0 | N/A | 19 | 1 | 1 | 1
+PIN | NRAMCS | 536871040 | 0 | N/A | 12
+PIN | NROMCS | 536871040 | 0 | N/A | 13
+PIN | RA<16> | 536871040 | 0 | N/A | 25
+PIN | NRDS | 536871040 | 0 | N/A | 16
+PIN | NWDS | 536871040 | 0 | N/A | 23
+PIN | RA<12> | 536871040 | 0 | N/A | 31
+PIN | RA<13> | 536871040 | 0 | N/A | 33
+PIN | RA<14> | 536871040 | 0 | N/A | 24
+PIN | RA<15> | 536871040 | 0 | N/A | 27
+PIN | NBuffCtl | 536871040 | 0 | N/A | 18
+PIN | Data<0> | 536870976 | 0 | N/A | 10 | 2 | 0 | 17 | 0 | 4
+PIN | Data<1> | 536870976 | 0 | N/A | 9 | 2 | 0 | 11 | 0 | 1
+PIN | Data<2> | 536870976 | 0 | N/A | 7 | 2 | 0 | 7 | 1 | 14
+PIN | Data<3> | 536870976 | 0 | N/A | 5 | 2 | 1 | 16 | 1 | 13
